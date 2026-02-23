@@ -114,7 +114,7 @@ export default function App() {
       </div>
 
       <footer>
-        Made with love for our <span className="footer-gold">anniversary adventure</span> &hearts;
+        Here&apos;s to <span className="footer-gold">25 More</span> &hearts; Three cities. Five hotels. Fourteen nights. One incredible adventure together.
       </footer>
     </>
   );

@@ -20,7 +20,9 @@ export default function DayCard({
         </div>
         <span className="location">{day.location}</span>
       </div>
-      <div className="day-weather">&#9729; {day.weather}</div>
+      {day.weather && <div className="day-weather">&#9729; {day.weather}</div>}
+
+      {day.note && <div className="day-note">{day.note}</div>}
 
       {day.images?.length > 0 && (
         <div className="photo-grid">

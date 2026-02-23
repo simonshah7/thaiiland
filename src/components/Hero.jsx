@@ -36,7 +36,7 @@ export default function Hero() {
           Simon <span className="hero-ampersand">&</span> Yevgeniya
         </p>
         <h1 className="hero-title">Thailand 2026</h1>
-        <p className="hero-tagline">Anniversary Adventure &middot; 10 Days</p>
+        <p className="hero-tagline">25th Anniversary &middot; 14 Nights &middot; 3 Cities</p>
         <div className="hero-divider" />
         <div className="countdown">
           {started ? (
