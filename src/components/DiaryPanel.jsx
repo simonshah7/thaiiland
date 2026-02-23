@@ -1,5 +1,19 @@
 import { useState } from 'react';
 
+const BookOpenIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ verticalAlign: 'middle', marginRight: 6 }}>
+    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+  </svg>
+);
+
+const CameraIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ verticalAlign: 'middle', marginRight: 4 }}>
+    <path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z" />
+    <circle cx="12" cy="13" r="3" />
+  </svg>
+);
+
 export default function DiaryPanel({ dayId, dayLabel, diary, onSave, onOpenLightbox }) {
   const [open, setOpen] = useState(false);
   const [text, setText] = useState(diary.text || '');
@@ -60,19 +74,19 @@ export default function DiaryPanel({ dayId, dayLabel, diary, onSave, onOpenLight
   return (
     <>
       <button className="diary-btn" onClick={() => setOpen((v) => !v)}>
-        &#128221; Journal {hasEntries ? '(has entries)' : ''}
+        <BookOpenIcon /> Journal {hasEntries ? '(has entries)' : ''}
       </button>
 
       {open && (
         <div className="diary-panel open">
-          <h4>&#128221; {dayLabel} Journal</h4>
+          <h4><BookOpenIcon /> {dayLabel} Journal</h4>
           <textarea
             placeholder="Write about your day... What did you see, feel, taste, love?"
             value={text}
             onChange={(e) => setText(e.target.value)}
           />
           <div className="upload-area">
-            &#128247; Click or drag photos here to upload
+            <CameraIcon /> Click or drag photos here to upload
             <input
               type="file"
               accept="image/*"

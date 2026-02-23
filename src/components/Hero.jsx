@@ -28,7 +28,7 @@ export default function Hero() {
         className="hero-bg"
         style={{
           backgroundImage:
-            'url(https://images.unsplash.com/photo-1528181304800-259b08848526?w=1920&q=80)',
+            'url(https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Wat_Arun_Ratchawararam_and_Royal_Barge_Procession.JPG/1920px-Wat_Arun_Ratchawararam_and_Royal_Barge_Procession.JPG)',
         }}
       />
       <div className="hero-content">

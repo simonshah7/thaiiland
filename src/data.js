@@ -5,19 +5,19 @@ export const CITIES = [
     name: 'Bangkok',
     subtitle: 'The City of Angels',
     dayRange: [1, 4],
-    heroImage: 'https://images.unsplash.com/photo-1563492065599-3520f775eeed?w=1600&q=80',
+    heroImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Bangkok_Night_Wikimedia_Commons.jpg/1600px-Bangkok_Night_Wikimedia_Commons.jpg',
   },
   {
     name: 'Chiang Mai',
     subtitle: 'The Rose of the North',
     dayRange: [5, 6],
-    heroImage: 'https://images.unsplash.com/photo-1598935898639-81586f7d2129?w=1600&q=80',
+    heroImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Chiang-Mai_Thailand_Wat-Chedi-Luang-01.jpg/1600px-Chiang-Mai_Thailand_Wat-Chedi-Luang-01.jpg',
   },
   {
     name: 'Krabi',
     subtitle: 'Emerald Waters & Limestone Dreams',
     dayRange: [7, 10],
-    heroImage: 'https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=1600&q=80',
+    heroImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Railay.jpg/1600px-Railay.jpg',
   },
 ];
 
@@ -36,9 +36,9 @@ export const DAYS = [
       { time: 'Late Night', activity: 'Walk along the Chao Phraya River', cost: '' },
     ],
     images: [
-      'https://images.unsplash.com/photo-1563492065599-3520f775eeed?w=600&q=80',
-      'https://images.unsplash.com/photo-1555921015-5532091f6026?w=600&q=80',
-      'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=80',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Bangkok_Night_Wikimedia_Commons.jpg/600px-Bangkok_Night_Wikimedia_Commons.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Wat_Arun_Ratchawararam_and_Royal_Barge_Procession.JPG/600px-Wat_Arun_Ratchawararam_and_Royal_Barge_Procession.JPG',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Thai_Food_in_street.JPG/600px-Thai_Food_in_street.JPG',
     ],
   },
   {
@@ -56,9 +56,9 @@ export const DAYS = [
       { time: 'Night', activity: 'Rooftop dinner & drinks at a sky bar', cost: '~\u0e3f2,000' },
     ],
     images: [
-      'https://images.unsplash.com/photo-1528181304800-259b08848526?w=600&q=80',
-      'https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=600&q=80',
-      'https://images.unsplash.com/photo-1562602833-0f4ab2fc46e5?w=600&q=80',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Grand_Palace%2C_Bangkok_P1100456.JPG/600px-Grand_Palace%2C_Bangkok_P1100456.JPG',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Panorama_of_Reclining_Buddha_-_Wat_Pho.jpg/600px-Panorama_of_Reclining_Buddha_-_Wat_Pho.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Wat_Arun_Ratchawararam_and_Royal_Barge_Procession.JPG/600px-Wat_Arun_Ratchawararam_and_Royal_Barge_Procession.JPG',
     ],
   },
   {
@@ -76,9 +76,9 @@ export const DAYS = [
       { time: 'Night', activity: 'Night market food crawl at Jodd Fairs', cost: '~\u0e3f500' },
     ],
     images: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Chiang-Mai_Thailand_Songkran-Festival-2017-02.jpg/600px-Chiang-Mai_Thailand_Songkran-Festival-2017-02.jpg',
       'https://images.unsplash.com/photo-1504214208698-ea1916a2195a?w=600&q=80',
-      'https://images.unsplash.com/photo-1596422846543-75c6fc197f07?w=600&q=80',
-      'https://images.unsplash.com/photo-1455244206805-a73e05e10245?w=600&q=80',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Thai_Food_in_street.JPG/600px-Thai_Food_in_street.JPG',
     ],
   },
   {
@@ -96,8 +96,8 @@ export const DAYS = [
       { time: 'Night', activity: 'Pack for Chiang Mai, early flight tomorrow', cost: '' },
     ],
     images: [
-      'https://images.unsplash.com/photo-1540611025311-01df3cef54b5?w=600&q=80',
-      'https://images.unsplash.com/photo-1569058242253-92a9c755a0ec?w=600&q=80',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Floating_market_at_Damnoen_Saduak_1.JPG/600px-Floating_market_at_Damnoen_Saduak_1.JPG',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Longtail_boat_at_Maya_bay.JPG/600px-Longtail_boat_at_Maya_bay.JPG',
       'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80',
     ],
   },
@@ -116,9 +116,9 @@ export const DAYS = [
       { time: 'Night', activity: 'Night Bazaar \u2013 crafts, souvenirs, street food', cost: '~\u0e3f500' },
     ],
     images: [
-      'https://images.unsplash.com/photo-1598935898639-81586f7d2129?w=600&q=80',
-      'https://images.unsplash.com/photo-1512553785966-2916b5b046fb?w=600&q=80',
-      'https://images.unsplash.com/photo-1569562211093-4ed0d0758f12?w=600&q=80',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Chiang-Mai_Thailand_Wat-Chedi-Luang-01.jpg/600px-Chiang-Mai_Thailand_Wat-Chedi-Luang-01.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Phra_That_Doi_Suthep_Chiang_Mai.jpg/600px-Phra_That_Doi_Suthep_Chiang_Mai.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/CHIANG_MAI_NIGHT_BAZAAR_THAILAND_FEB_2012_%286869571256%29.jpg/600px-CHIANG_MAI_NIGHT_BAZAAR_THAILAND_FEB_2012_%286869571256%29.jpg',
     ],
   },
   {
@@ -136,9 +136,9 @@ export const DAYS = [
       { time: 'Night', activity: 'Couples spa treatment \u2013 herbal compress massage', cost: '~\u0e3f2,000' },
     ],
     images: [
-      'https://images.unsplash.com/photo-1585970480901-90d6bb2a48b5?w=600&q=80',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Mahout_Elephant_Nature_Park.JPG/600px-Mahout_Elephant_Nature_Park.JPG',
       'https://images.unsplash.com/photo-1448375240586-882707db888b?w=600&q=80',
-      'https://images.unsplash.com/photo-1600456899121-68eda5705257?w=600&q=80',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Phra_That_Doi_Suthep_Chiang_Mai.jpg/600px-Phra_That_Doi_Suthep_Chiang_Mai.jpg',
     ],
   },
   {
@@ -156,7 +156,7 @@ export const DAYS = [
       { time: 'Night', activity: 'Beach bar cocktails with live music', cost: '~\u0e3f500' },
     ],
     images: [
-      'https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=600&q=80',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Railay.jpg/600px-Railay.jpg',
       'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80',
       'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=80',
     ],
@@ -177,8 +177,8 @@ export const DAYS = [
       { time: 'Night', activity: 'Night market dinner at Krabi Town', cost: '~\u0e3f400' },
     ],
     images: [
-      'https://images.unsplash.com/photo-1537956965359-7573183d1f57?w=600&q=80',
-      'https://images.unsplash.com/photo-1544550581-5f7ceaf7f992?w=600&q=80',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Longtail_boat_at_Maya_bay.JPG/600px-Longtail_boat_at_Maya_bay.JPG',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/KohPhiPhi.JPG/600px-KohPhiPhi.JPG',
       'https://images.unsplash.com/photo-1519046904884-53103b34b206?w=600&q=80',
     ],
   },
@@ -197,7 +197,7 @@ export const DAYS = [
       { time: 'Night', activity: 'Lantern release on the beach', cost: '~\u0e3f200' },
     ],
     images: [
-      'https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=600&q=80',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Emerald_Pool_%28Sa_Morakot%29.jpg/600px-Emerald_Pool_%28Sa_Morakot%29.jpg',
       'https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=600&q=80',
       'https://images.unsplash.com/photo-1540202404-a2f29016b523?w=600&q=80',
     ],
@@ -218,7 +218,7 @@ export const DAYS = [
     images: [
       'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80',
       'https://images.unsplash.com/photo-1504214208698-ea1916a2195a?w=600&q=80',
-      'https://images.unsplash.com/photo-1528181304800-259b08848526?w=600&q=80',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Grand_Palace%2C_Bangkok_P1100456.JPG/600px-Grand_Palace%2C_Bangkok_P1100456.JPG',
     ],
   },
 ];
