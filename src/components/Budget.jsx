@@ -4,15 +4,14 @@ export default function Budget() {
   return (
     <section id="budget" className="reveal">
       <h2>
-        <span className="icon">&#128176;</span> Budget Summary
+        <span className="icon">&#128176;</span> Booking Summary
       </h2>
       <div className="card-wrap">
         <table className="budget-table">
           <thead>
             <tr>
-              <th>Category</th>
-              <th>Detail</th>
-              <th>Est. Cost</th>
+              <th>Booking</th>
+              <th>Details</th>
             </tr>
           </thead>
           <tbody>
@@ -22,15 +21,8 @@ export default function Budget() {
                   <strong>{b.cat}</strong>
                 </td>
                 <td>{b.detail}</td>
-                <td>{b.cost}</td>
               </tr>
             ))}
-            <tr>
-              <td colSpan={2} className="budget-total">
-                Estimated Total (per couple)
-              </td>
-              <td className="budget-total">~&#3647;100,000 (~$2,800 USD)</td>
-            </tr>
           </tbody>
         </table>
       </div>
