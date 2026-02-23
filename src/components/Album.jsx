@@ -7,19 +7,19 @@ export default function Album({ diaryData, onClose, onOpenLightbox }) {
   });
 
   return (
-    <div className="album-overlay open">
+    <div className="album-overlay">
       <button className="album-close" onClick={onClose}>
         &times;
       </button>
       <div className="album-inner">
         <h2>Our Thailand Album</h2>
-        <p className="album-sub">Memories from our anniversary trip</p>
+        <p className="album-sub">Memories from our anniversary adventure</p>
 
         {entries.length === 0 ? (
           <div className="album-empty">
             <div className="big-icon">&#128247;</div>
-            <p>No journal entries yet!</p>
-            <p style={{ marginTop: 8, fontSize: '.85rem' }}>
+            <p>No journal entries yet.</p>
+            <p style={{ marginTop: 10, fontSize: '.88rem' }}>
               Write about your day and upload photos in each day&apos;s Journal
               section. They&apos;ll appear here as your trip album.
             </p>

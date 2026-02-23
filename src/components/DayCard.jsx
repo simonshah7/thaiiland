@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import TimelineItem from './TimelineItem';
 import DiaryPanel from './DiaryPanel';
 
@@ -10,10 +9,8 @@ export default function DayCard({
   onSaveDiary,
   onOpenLightbox,
 }) {
-  const [galleryOpen, setGalleryOpen] = useState(false);
-
   return (
-    <div className="day-card" id={day.id}>
+    <div className="day-card reveal" id={day.id}>
       <div className="day-header">
         <div>
           <h3>
@@ -24,6 +21,20 @@ export default function DayCard({
         <span className="location">{day.location}</span>
       </div>
       <div className="day-weather">&#9729; {day.weather}</div>
+
+      {day.images?.length > 0 && (
+        <div className="photo-grid">
+          {day.images.map((src, i) => (
+            <img
+              key={i}
+              src={src}
+              alt={`${day.title} photo ${i + 1}`}
+              loading="lazy"
+              onClick={() => onOpenLightbox(src)}
+            />
+          ))}
+        </div>
+      )}
 
       <div className="timeline">
         {day.items.map((item, i) => {
@@ -39,30 +50,6 @@ export default function DayCard({
           );
         })}
       </div>
-
-      {day.images?.length > 0 && (
-        <>
-          <button
-            className="gallery-toggle"
-            onClick={() => setGalleryOpen((v) => !v)}
-          >
-            {galleryOpen ? '\u25BC Hide' : '\u25B6 Show'} photos ({day.images.length})
-          </button>
-          {galleryOpen && (
-            <div className="imgs">
-              {day.images.map((src, i) => (
-                <img
-                  key={i}
-                  src={src}
-                  alt={day.title}
-                  loading="lazy"
-                  onClick={() => onOpenLightbox(src)}
-                />
-              ))}
-            </div>
-          )}
-        </>
-      )}
 
       <DiaryPanel
         dayId={day.id}

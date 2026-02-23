@@ -2,7 +2,7 @@ import { BUDGET } from '../data';
 
 export default function Budget() {
   return (
-    <section id="budget">
+    <section id="budget" className="reveal">
       <h2>
         <span className="icon">&#128176;</span> Budget Summary
       </h2>
@@ -29,7 +29,7 @@ export default function Budget() {
               <td colSpan={2} className="budget-total">
                 Estimated Total (per couple)
               </td>
-              <td className="budget-total">~฿100,000 (~$2,800 USD)</td>
+              <td className="budget-total">~&#3647;100,000 (~$2,800 USD)</td>
             </tr>
           </tbody>
         </table>

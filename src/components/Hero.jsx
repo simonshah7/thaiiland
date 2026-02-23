@@ -18,29 +18,40 @@ export default function Hero() {
   const units = [
     { n: d, l: 'Days' },
     { n: h, l: 'Hours' },
-    { n: m, l: 'Mins' },
-    { n: s, l: 'Secs' },
+    { n: m, l: 'Minutes' },
+    { n: s, l: 'Seconds' },
   ];
 
   return (
     <header className="hero">
-      <h1>Thailand 2026</h1>
-      <p className="subtitle">Anniversary Trip &bull; 10 Days of Adventure</p>
-      <div className="countdown">
-        {started ? (
-          <div className="unit" style={{ minWidth: 'auto', padding: '12px 24px' }}>
-            <span className="num" style={{ fontSize: '1.2rem' }}>
-              We&apos;re in Thailand! &#127796;
-            </span>
-          </div>
-        ) : (
-          units.map((u) => (
-            <div className="unit" key={u.l}>
-              <span className="num">{u.n}</span>
-              <span className="lbl">{u.l}</span>
+      <div
+        className="hero-bg"
+        style={{
+          backgroundImage:
+            'url(https://images.unsplash.com/photo-1528181304800-259b08848526?w=1920&q=80)',
+        }}
+      />
+      <div className="hero-content">
+        <p className="hero-couple-names">
+          Simon <span className="hero-ampersand">&</span> Yevgeniya
+        </p>
+        <h1 className="hero-title">Thailand 2026</h1>
+        <p className="hero-tagline">Anniversary Adventure &middot; 10 Days</p>
+        <div className="hero-divider" />
+        <div className="countdown">
+          {started ? (
+            <div className="countdown-live">
+              We&apos;re in Thailand!
             </div>
-          ))
-        )}
+          ) : (
+            units.map((u) => (
+              <div className="unit" key={u.l}>
+                <span className="num">{u.n}</span>
+                <span className="lbl">{u.l}</span>
+              </div>
+            ))
+          )}
+        </div>
       </div>
     </header>
   );

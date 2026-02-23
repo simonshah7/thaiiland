@@ -1,8 +1,10 @@
 import { useState, useEffect, useCallback } from 'react';
-import { DAYS } from './data';
+import { DAYS, CITIES } from './data';
 import { useLocalStorage } from './hooks/useLocalStorage';
+import { useScrollReveal } from './hooks/useScrollReveal';
 import Hero from './components/Hero';
 import DayNav from './components/DayNav';
+import CitySection from './components/CitySection';
 import DayCard from './components/DayCard';
 import Album from './components/Album';
 import Lightbox from './components/Lightbox';
@@ -17,6 +19,8 @@ export default function App() {
   const [checklist, setChecklist] = useLocalStorage('trip-checklist', {});
   const [albumOpen, setAlbumOpen] = useState(false);
   const [lightboxSrc, setLightboxSrc] = useState(null);
+
+  useScrollReveal();
 
   useEffect(() => {
     document.body.classList.toggle('dark', dark);
@@ -78,29 +82,40 @@ export default function App() {
 
       <Lightbox src={lightboxSrc} onClose={() => setLightboxSrc(null)} />
 
-      <div className="container">
-        <section id="itinerary">
-          <h2>
-            <span className="icon">&#9992;</span> Itinerary
-          </h2>
-          {DAYS.map((day) => (
-            <DayCard
-              key={day.id}
-              day={day}
-              notes={notes}
-              onSaveNote={handleSaveNote}
-              diary={diaryData[day.id] || { text: '', images: [] }}
-              onSaveDiary={handleSaveDiary}
-              onOpenLightbox={setLightboxSrc}
-            />
-          ))}
-        </section>
+      {CITIES.map((city) => {
+        const [start, end] = city.dayRange;
+        const cityDays = DAYS.filter((_, i) => i + 1 >= start && i + 1 <= end);
 
+        return (
+          <div key={city.name}>
+            <CitySection city={city} />
+            <div className="container">
+              <section id={`itinerary-${city.name.toLowerCase().replace(/\s+/g, '-')}`}>
+                {cityDays.map((day) => (
+                  <DayCard
+                    key={day.id}
+                    day={day}
+                    notes={notes}
+                    onSaveNote={handleSaveNote}
+                    diary={diaryData[day.id] || { text: '', images: [] }}
+                    onSaveDiary={handleSaveDiary}
+                    onOpenLightbox={setLightboxSrc}
+                  />
+                ))}
+              </section>
+            </div>
+          </div>
+        );
+      })}
+
+      <div className="container">
         <Budget />
         <Checklist checked={checklist} onToggle={handleToggleCheck} />
       </div>
 
-      <footer>Made with love for our anniversary adventure &hearts;</footer>
+      <footer>
+        Made with love for our <span className="footer-gold">anniversary adventure</span> &hearts;
+      </footer>
     </>
   );
 }
