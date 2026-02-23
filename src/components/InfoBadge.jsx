@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 
 const InfoIcon = () => (
   <svg
@@ -21,20 +21,39 @@ const InfoIcon = () => (
 
 export default function InfoBadge({ info }) {
   const [open, setOpen] = useState(false);
-  const ref = useRef(null);
+  const [pos, setPos] = useState({ top: 0, left: 0 });
+  const btnRef = useRef(null);
+  const popRef = useRef(null);
+
+  const updatePos = useCallback(() => {
+    if (!btnRef.current) return;
+    const r = btnRef.current.getBoundingClientRect();
+    setPos({ top: r.bottom + 8, left: r.left + r.width / 2 });
+  }, []);
 
   useEffect(() => {
     if (!open) return;
+    updatePos();
     const close = (e) => {
-      if (ref.current && !ref.current.contains(e.target)) setOpen(false);
+      if (
+        popRef.current && !popRef.current.contains(e.target) &&
+        btnRef.current && !btnRef.current.contains(e.target)
+      ) {
+        setOpen(false);
+      }
     };
     document.addEventListener('mousedown', close);
-    return () => document.removeEventListener('mousedown', close);
-  }, [open]);
+    window.addEventListener('scroll', () => setOpen(false), true);
+    return () => {
+      document.removeEventListener('mousedown', close);
+      window.removeEventListener('scroll', () => setOpen(false), true);
+    };
+  }, [open, updatePos]);
 
   return (
-    <span className="info-badge-wrap" ref={ref}>
+    <span className="info-badge-wrap">
       <button
+        ref={btnRef}
         className="info-badge"
         onClick={(e) => {
           e.stopPropagation();
@@ -46,7 +65,12 @@ export default function InfoBadge({ info }) {
         <InfoIcon />
       </button>
       {open && (
-        <div className="info-popover" onClick={(e) => e.stopPropagation()}>
+        <div
+          ref={popRef}
+          className="info-popover"
+          style={{ top: pos.top, left: pos.left }}
+          onClick={(e) => e.stopPropagation()}
+        >
           {info.map((line, i) => (
             <div key={i} className={`info-line${i === 0 ? ' info-title' : ''}`}>
               {line}
