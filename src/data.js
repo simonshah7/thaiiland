@@ -5,19 +5,19 @@ export const CITIES = [
     name: 'Bangkok',
     subtitle: 'The City of Angels',
     dayRange: [1, 4],
-    heroImage: 'https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=1600&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1563492065599-3520f775eeed?w=1600&q=80',
   },
   {
     name: 'Chiang Mai',
     subtitle: 'The Rose of the North',
     dayRange: [5, 6],
-    heroImage: 'https://images.unsplash.com/photo-1599647066579-747e25f548f1?w=1600&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1598935898639-81586f7d2129?w=1600&q=80',
   },
   {
     name: 'Krabi',
     subtitle: 'Emerald Waters & Limestone Dreams',
     dayRange: [7, 10],
-    heroImage: 'https://images.unsplash.com/photo-1519451241324-20b4ea2c4220?w=1600&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=1600&q=80',
   },
 ];
 
@@ -36,9 +36,9 @@ export const DAYS = [
       { time: 'Late Night', activity: 'Walk along the Chao Phraya River', cost: '' },
     ],
     images: [
-      'https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=600&q=80',
       'https://images.unsplash.com/photo-1563492065599-3520f775eeed?w=600&q=80',
-      'https://images.unsplash.com/photo-1583531172005-814549607406?w=600&q=80',
+      'https://images.unsplash.com/photo-1555921015-5532091f6026?w=600&q=80',
+      'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=80',
     ],
   },
   {
@@ -77,8 +77,8 @@ export const DAYS = [
     ],
     images: [
       'https://images.unsplash.com/photo-1504214208698-ea1916a2195a?w=600&q=80',
-      'https://images.unsplash.com/photo-1534430480872-3498386e7856?w=600&q=80',
-      'https://images.unsplash.com/photo-1494949360228-4e9f79b45c40?w=600&q=80',
+      'https://images.unsplash.com/photo-1596422846543-75c6fc197f07?w=600&q=80',
+      'https://images.unsplash.com/photo-1455244206805-a73e05e10245?w=600&q=80',
     ],
   },
   {
@@ -96,9 +96,9 @@ export const DAYS = [
       { time: 'Night', activity: 'Pack for Chiang Mai, early flight tomorrow', cost: '' },
     ],
     images: [
-      'https://images.unsplash.com/photo-1573650450328-1e4afec2ecd7?w=600&q=80',
-      'https://images.unsplash.com/photo-1506665531195-3566af2b4dfa?w=600&q=80',
-      'https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?w=600&q=80',
+      'https://images.unsplash.com/photo-1540611025311-01df3cef54b5?w=600&q=80',
+      'https://images.unsplash.com/photo-1569058242253-92a9c755a0ec?w=600&q=80',
+      'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80',
     ],
   },
   {
@@ -116,9 +116,9 @@ export const DAYS = [
       { time: 'Night', activity: 'Night Bazaar \u2013 crafts, souvenirs, street food', cost: '~\u0e3f500' },
     ],
     images: [
-      'https://images.unsplash.com/photo-1599647066579-747e25f548f1?w=600&q=80',
-      'https://images.unsplash.com/photo-1558431382-27e303142255?w=600&q=80',
+      'https://images.unsplash.com/photo-1598935898639-81586f7d2129?w=600&q=80',
       'https://images.unsplash.com/photo-1512553785966-2916b5b046fb?w=600&q=80',
+      'https://images.unsplash.com/photo-1569562211093-4ed0d0758f12?w=600&q=80',
     ],
   },
   {
@@ -136,9 +136,9 @@ export const DAYS = [
       { time: 'Night', activity: 'Couples spa treatment \u2013 herbal compress massage', cost: '~\u0e3f2,000' },
     ],
     images: [
-      'https://images.unsplash.com/photo-1516382799247-87df95d790b7?w=600&q=80',
-      'https://images.unsplash.com/photo-1551632811-561732d1e306?w=600&q=80',
-      'https://images.unsplash.com/photo-1569091791842-7cfb64e04797?w=600&q=80',
+      'https://images.unsplash.com/photo-1585970480901-90d6bb2a48b5?w=600&q=80',
+      'https://images.unsplash.com/photo-1448375240586-882707db888b?w=600&q=80',
+      'https://images.unsplash.com/photo-1600456899121-68eda5705257?w=600&q=80',
     ],
   },
   {
@@ -156,9 +156,9 @@ export const DAYS = [
       { time: 'Night', activity: 'Beach bar cocktails with live music', cost: '~\u0e3f500' },
     ],
     images: [
-      'https://images.unsplash.com/photo-1519451241324-20b4ea2c4220?w=600&q=80',
       'https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=600&q=80',
-      'https://images.unsplash.com/photo-1537956965359-7573183d1f57?w=600&q=80',
+      'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80',
+      'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=80',
     ],
   },
   {
@@ -178,8 +178,8 @@ export const DAYS = [
     ],
     images: [
       'https://images.unsplash.com/photo-1537956965359-7573183d1f57?w=600&q=80',
-      'https://images.unsplash.com/photo-1468413253725-0d5181091126?w=600&q=80',
-      'https://images.unsplash.com/photo-1483683804023-6ccdb62f86ef?w=600&q=80',
+      'https://images.unsplash.com/photo-1544550581-5f7ceaf7f992?w=600&q=80',
+      'https://images.unsplash.com/photo-1519046904884-53103b34b206?w=600&q=80',
     ],
   },
   {
@@ -197,9 +197,9 @@ export const DAYS = [
       { time: 'Night', activity: 'Lantern release on the beach', cost: '~\u0e3f200' },
     ],
     images: [
-      'https://images.unsplash.com/photo-1501446529957-6226bd447c46?w=600&q=80',
-      'https://images.unsplash.com/photo-1483683804023-6ccdb62f86ef?w=600&q=80',
-      'https://images.unsplash.com/photo-1506665531195-3566af2b4dfa?w=600&q=80',
+      'https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=600&q=80',
+      'https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=600&q=80',
+      'https://images.unsplash.com/photo-1540202404-a2f29016b523?w=600&q=80',
     ],
   },
   {
@@ -216,7 +216,7 @@ export const DAYS = [
       { time: 'Evening', activity: 'Fly home \u2013 full of memories!', cost: '' },
     ],
     images: [
-      'https://images.unsplash.com/photo-1506665531195-3566af2b4dfa?w=600&q=80',
+      'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80',
       'https://images.unsplash.com/photo-1504214208698-ea1916a2195a?w=600&q=80',
       'https://images.unsplash.com/photo-1528181304800-259b08848526?w=600&q=80',
     ],
