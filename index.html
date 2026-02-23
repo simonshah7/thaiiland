@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thailand Anniversary Trip 2026</title>
+<style>
+/* ===== CSS Variables & Reset ===== */
+:root {
+  --bg: #fdf6e3;
+  --bg2: #fff8ed;
+  --text: #2d2a26;
+  --text2: #5a554d;
+  --accent: #e8913a;
+  --accent2: #d4783a;
+  --gold: #c9a84c;
+  --teal: #2a9d8f;
+  --pink: #e76f8b;
+  --card: #ffffff;
+  --card-shadow: 0 2px 16px rgba(0,0,0,0.07);
+  --border: #ede6d8;
+  --radius: 14px;
+  --nav-width: 56px;
+}
+.dark {
+  --bg: #1a1a2e;
+  --bg2: #16213e;
+  --text: #e0ddd5;
+  --text2: #a09b93;
+  --accent: #f0a04b;
+  --accent2: #e8913a;
+  --gold: #d4b95e;
+  --teal: #3ec1b0;
+  --pink: #f087a0;
+  --card: #1f2b47;
+  --card-shadow: 0 2px 16px rgba(0,0,0,0.3);
+  --border: #2a3655;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  transition: background .3s, color .3s;
+}
+a { color: var(--teal); text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { max-width: 100%; border-radius: var(--radius); }
+
+/* ===== Top Controls ===== */
+.top-controls {
+  position: fixed; top: 16px; right: 16px; z-index: 1000;
+  display: flex; gap: 8px;
+}
+.top-controls button, .top-controls label {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 50px; padding: 8px 14px; cursor: pointer;
+  font-size: .85rem; color: var(--text); box-shadow: var(--card-shadow);
+  transition: all .2s;
+}
+.top-controls button:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+
+/* ===== Hero Section ===== */
+.hero {
+  text-align: center; padding: 80px 20px 50px;
+  background: linear-gradient(135deg, #ff9a56 0%, #e76f8b 50%, #a855f7 100%);
+  color: #fff; position: relative; overflow: hidden;
+}
+.hero::after {
+  content: ''; position: absolute; bottom: -2px; left: 0; right: 0; height: 60px;
+  background: var(--bg);
+  clip-path: ellipse(55% 100% at 50% 100%);
+}
+.hero h1 { font-size: 2.8rem; font-weight: 800; letter-spacing: -1px; }
+.hero .subtitle { font-size: 1.15rem; opacity: .9; margin-top: 6px; }
+.countdown {
+  display: flex; justify-content: center; gap: 18px; margin-top: 24px; flex-wrap: wrap;
+}
+.countdown .unit {
+  background: rgba(255,255,255,.2); backdrop-filter: blur(6px);
+  border-radius: 12px; padding: 12px 18px; min-width: 72px; text-align: center;
+}
+.countdown .num { font-size: 2rem; font-weight: 800; display: block; }
+.countdown .lbl { font-size: .7rem; text-transform: uppercase; letter-spacing: 1px; opacity: .85; }
+
+/* ===== Day Nav (side) ===== */
+.day-nav {
+  position: fixed; left: 0; top: 50%; transform: translateY(-50%);
+  z-index: 900; display: flex; flex-direction: column; gap: 4px;
+  padding: 10px 6px; background: var(--card); border-radius: 0 14px 14px 0;
+  box-shadow: var(--card-shadow);
+}
+.day-nav a {
+  display: flex; align-items: center; justify-content: center;
+  width: 38px; height: 38px; border-radius: 10px; font-size: .75rem;
+  font-weight: 700; color: var(--text2); transition: all .2s; text-decoration: none;
+}
+.day-nav a:hover, .day-nav a.active { background: var(--accent); color: #fff; }
+
+/* ===== Sections ===== */
+.container { max-width: 900px; margin: 0 auto; padding: 0 20px 60px; }
+section { margin-top: 48px; }
+section h2 {
+  font-size: 1.5rem; font-weight: 700; margin-bottom: 20px;
+  display: flex; align-items: center; gap: 10px;
+}
+section h2 .icon { font-size: 1.3rem; }
+
+/* ===== Day Cards ===== */
+.day-card {
+  background: var(--card); border-radius: var(--radius); padding: 28px;
+  margin-bottom: 28px; box-shadow: var(--card-shadow);
+  border-left: 4px solid var(--accent); transition: all .3s;
+}
+.day-card:hover { box-shadow: 0 4px 24px rgba(0,0,0,0.1); }
+.day-header {
+  display: flex; justify-content: space-between; align-items: flex-start;
+  flex-wrap: wrap; gap: 10px; margin-bottom: 16px;
+}
+.day-header h3 { font-size: 1.25rem; font-weight: 700; }
+.day-header .date { font-size: .85rem; color: var(--text2); }
+.day-header .location {
+  background: var(--teal); color: #fff; font-size: .72rem;
+  padding: 3px 10px; border-radius: 50px; font-weight: 600;
+}
+.day-weather {
+  display: inline-flex; align-items: center; gap: 5px;
+  font-size: .8rem; color: var(--text2); margin-bottom: 12px;
+}
+
+/* Timeline items */
+.timeline { position: relative; padding-left: 24px; }
+.timeline::before {
+  content: ''; position: absolute; left: 7px; top: 4px; bottom: 4px;
+  width: 2px; background: var(--border);
+}
+.timeline-item {
+  position: relative; margin-bottom: 14px; padding: 10px 14px;
+  background: var(--bg2); border-radius: 10px; cursor: pointer;
+  transition: all .2s;
+}
+.timeline-item:hover { background: var(--bg); box-shadow: 0 1px 8px rgba(0,0,0,0.05); }
+.timeline-item::before {
+  content: ''; position: absolute; left: -21px; top: 16px;
+  width: 10px; height: 10px; border-radius: 50%;
+  background: var(--accent); border: 2px solid var(--card);
+}
+.timeline-item .time {
+  font-size: .72rem; font-weight: 700; color: var(--accent);
+  text-transform: uppercase;
+}
+.timeline-item .activity { font-size: .92rem; margin-top: 2px; }
+.timeline-item .cost {
+  display: inline-block; margin-top: 4px; font-size: .75rem;
+  background: var(--gold); color: #fff; padding: 1px 8px; border-radius: 50px;
+}
+.timeline-item .note-badge {
+  display: inline-block; margin-left: 6px; font-size: .7rem;
+  background: var(--pink); color: #fff; padding: 1px 6px; border-radius: 50px;
+}
+.note-editor {
+  margin-top: 8px; display: none;
+}
+.note-editor.open { display: block; }
+.note-editor textarea {
+  width: 100%; border: 1px solid var(--border); border-radius: 8px;
+  padding: 8px; font-size: .85rem; resize: vertical; min-height: 50px;
+  background: var(--card); color: var(--text); font-family: inherit;
+}
+.note-editor button {
+  margin-top: 6px; padding: 4px 12px; font-size: .75rem;
+  background: var(--teal); color: #fff; border: none; border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Image gallery */
+.gallery-toggle {
+  font-size: .78rem; color: var(--teal); background: none; border: none;
+  cursor: pointer; margin-top: 10px; font-weight: 600; padding: 4px 0;
+}
+.imgs {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 10px; margin-top: 10px;
+}
+.imgs.collapsed { display: none; }
+.imgs img {
+  width: 100%; height: 140px; object-fit: cover; border-radius: 10px;
+  transition: transform .2s;
+}
+.imgs img:hover { transform: scale(1.03); }
+
+/* ===== Diary / Journal ===== */
+.diary-btn {
+  display: inline-flex; align-items: center; gap: 5px;
+  background: var(--pink); color: #fff; border: none; border-radius: 50px;
+  padding: 6px 14px; font-size: .8rem; font-weight: 600; cursor: pointer;
+  margin-top: 14px; transition: all .2s;
+}
+.diary-btn:hover { filter: brightness(1.1); }
+
+.diary-panel {
+  display: none; margin-top: 16px; background: var(--bg2);
+  border-radius: var(--radius); padding: 20px;
+  border: 1px solid var(--border);
+}
+.diary-panel.open { display: block; }
+.diary-panel h4 { font-size: 1rem; margin-bottom: 12px; }
+.diary-panel textarea {
+  width: 100%; min-height: 80px; border: 1px solid var(--border);
+  border-radius: 10px; padding: 10px; font-family: inherit;
+  font-size: .9rem; resize: vertical; background: var(--card); color: var(--text);
+}
+.diary-panel .upload-area {
+  margin-top: 12px; border: 2px dashed var(--border); border-radius: 10px;
+  padding: 20px; text-align: center; color: var(--text2); font-size: .85rem;
+  cursor: pointer; transition: all .2s; position: relative;
+}
+.diary-panel .upload-area:hover { border-color: var(--accent); color: var(--accent); }
+.diary-panel .upload-area input {
+  position: absolute; inset: 0; opacity: 0; cursor: pointer;
+}
+.diary-photos {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 8px; margin-top: 12px;
+}
+.diary-photos .diary-photo-wrap {
+  position: relative; border-radius: 10px; overflow: hidden;
+}
+.diary-photos img {
+  width: 100%; height: 100px; object-fit: cover; border-radius: 10px;
+}
+.diary-photos .remove-photo {
+  position: absolute; top: 4px; right: 4px;
+  background: rgba(0,0,0,.6); color: #fff; border: none; border-radius: 50%;
+  width: 22px; height: 22px; font-size: .7rem; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+}
+.diary-save {
+  margin-top: 12px; padding: 8px 18px; background: var(--teal);
+  color: #fff; border: none; border-radius: 8px; font-size: .85rem;
+  font-weight: 600; cursor: pointer;
+}
+.diary-save:hover { filter: brightness(1.1); }
+.save-confirm {
+  display: inline-block; margin-left: 10px; color: var(--teal);
+  font-size: .8rem; font-weight: 600; opacity: 0; transition: opacity .3s;
+}
+.save-confirm.show { opacity: 1; }
+
+/* ===== Album View ===== */
+.album-overlay {
+  display: none; position: fixed; inset: 0; z-index: 2000;
+  background: var(--bg); overflow-y: auto;
+}
+.album-overlay.open { display: block; }
+.album-close {
+  position: fixed; top: 16px; right: 16px; z-index: 2001;
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 50%; width: 42px; height: 42px; font-size: 1.2rem;
+  cursor: pointer; box-shadow: var(--card-shadow); color: var(--text);
+  display: flex; align-items: center; justify-content: center;
+}
+.album-inner { max-width: 800px; margin: 0 auto; padding: 60px 20px 80px; }
+.album-inner h2 {
+  font-size: 2rem; text-align: center; margin-bottom: 8px;
+}
+.album-inner .album-sub {
+  text-align: center; color: var(--text2); margin-bottom: 40px; font-size: .95rem;
+}
+.album-day {
+  margin-bottom: 40px;
+}
+.album-day h3 {
+  font-size: 1.15rem; color: var(--accent); margin-bottom: 6px;
+  padding-bottom: 6px; border-bottom: 1px solid var(--border);
+}
+.album-day .album-text {
+  font-size: .92rem; color: var(--text2); margin-bottom: 12px;
+  white-space: pre-wrap; line-height: 1.7;
+}
+.album-day .album-photos {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+}
+.album-day .album-photos img {
+  width: 100%; height: 180px; object-fit: cover; border-radius: 12px;
+  cursor: pointer; transition: transform .2s;
+}
+.album-day .album-photos img:hover { transform: scale(1.02); }
+.album-empty {
+  text-align: center; padding: 60px 20px; color: var(--text2);
+}
+.album-empty .big-icon { font-size: 3rem; margin-bottom: 12px; }
+
+/* Lightbox */
+.lightbox {
+  display: none; position: fixed; inset: 0; z-index: 3000;
+  background: rgba(0,0,0,.9); align-items: center; justify-content: center;
+  cursor: pointer;
+}
+.lightbox.open { display: flex; }
+.lightbox img { max-width: 90vw; max-height: 90vh; border-radius: 8px; }
+
+/* ===== Budget Section ===== */
+.budget-table {
+  width: 100%; border-collapse: collapse; font-size: .88rem;
+}
+.budget-table th, .budget-table td {
+  padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border);
+}
+.budget-table th {
+  font-weight: 700; font-size: .75rem; text-transform: uppercase;
+  letter-spacing: .5px; color: var(--text2);
+}
+.budget-table tr:hover td { background: var(--bg2); }
+.budget-total {
+  font-weight: 800; font-size: 1rem; color: var(--accent);
+}
+
+/* ===== Checklist ===== */
+.checklist { list-style: none; }
+.checklist li {
+  display: flex; align-items: center; gap: 10px;
+  padding: 10px 0; border-bottom: 1px solid var(--border);
+  font-size: .92rem;
+}
+.checklist input[type="checkbox"] {
+  width: 18px; height: 18px; accent-color: var(--teal); cursor: pointer;
+}
+.checklist li.done { color: var(--text2); text-decoration: line-through; }
+
+/* ===== Footer ===== */
+footer {
+  text-align: center; padding: 40px 20px; color: var(--text2); font-size: .82rem;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 700px) {
+  .hero h1 { font-size: 1.8rem; }
+  .day-nav { display: none; }
+  .container { padding: 0 14px 40px; }
+  .day-card { padding: 18px; }
+  .imgs { grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); }
+  .album-day .album-photos { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); }
+}
+</style>
+</head>
+<body>
+
+<!-- Top Controls -->
+<div class="top-controls">
+  <button onclick="openAlbum()" title="View trip album">Album</button>
+  <button onclick="toggleDark()" id="darkBtn" title="Toggle dark mode">Dark</button>
+</div>
+
+<!-- Hero -->
+<header class="hero">
+  <h1>Thailand 2026</h1>
+  <p class="subtitle">Anniversary Trip &bull; 10 Days of Adventure</p>
+  <div class="countdown" id="countdown"></div>
+</header>
+
+<!-- Day Navigation -->
+<nav class="day-nav" id="dayNav"></nav>
+
+<!-- Album Overlay -->
+<div class="album-overlay" id="albumOverlay">
+  <button class="album-close" onclick="closeAlbum()">&times;</button>
+  <div class="album-inner" id="albumContent"></div>
+</div>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <img id="lightboxImg" src="" alt="Full size">
+</div>
+
+<div class="container">
+
+  <!-- ===== ITINERARY ===== -->
+  <section id="itinerary">
+    <h2><span class="icon">&#9992;</span> Itinerary</h2>
+    <div id="daysContainer"></div>
+  </section>
+
+  <!-- ===== BUDGET ===== -->
+  <section id="budget">
+    <h2><span class="icon">&#128176;</span> Budget Summary</h2>
+    <div style="background:var(--card);border-radius:var(--radius);padding:20px;box-shadow:var(--card-shadow);overflow-x:auto">
+      <table class="budget-table" id="budgetTable">
+        <thead><tr><th>Category</th><th>Detail</th><th>Est. Cost</th></tr></thead>
+        <tbody id="budgetBody"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ===== CHECKLIST ===== -->
+  <section id="checklist">
+    <h2><span class="icon">&#9745;</span> Pre-Trip Checklist</h2>
+    <div style="background:var(--card);border-radius:var(--radius);padding:20px;box-shadow:var(--card-shadow)">
+      <ul class="checklist" id="checklistUl"></ul>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  Made with love for our anniversary adventure &hearts;
+</footer>
+
+<script>
+// ============================================================
+// DATA
+// ============================================================
+const TRIP_START = new Date('2026-04-10T00:00:00');
+
+const DAYS = [
+  {
+    id: 'day1', day: 'Day 1', date: 'Fri, 10 Apr', title: 'Arrival in Bangkok',
+    location: 'Bangkok', weather: '34°C, Sunny & Humid',
+    items: [
+      { time: 'Afternoon', activity: 'Arrive at Suvarnabhumi Airport, transfer to hotel', cost: '' },
+      { time: 'Evening', activity: 'Check in to hotel near Khao San Road', cost: '~฿2,500/night' },
+      { time: 'Night', activity: 'Street food tour – Pad Thai, mango sticky rice, Thai iced tea', cost: '~฿300' },
+      { time: 'Late Night', activity: 'Walk along the Chao Phraya River', cost: '' }
+    ],
+    images: [
+      'https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=400',
+      'https://images.unsplash.com/photo-1563492065599-3520f775eeed?w=400'
+    ]
+  },
+  {
+    id: 'day2', day: 'Day 2', date: 'Sat, 11 Apr', title: 'Bangkok Temples & Culture',
+    location: 'Bangkok', weather: '35°C, Partly Cloudy',
+    items: [
+      { time: 'Morning', activity: 'Grand Palace & Wat Phra Kaew (Temple of the Emerald Buddha)', cost: '฿500 entry' },
+      { time: 'Midday', activity: 'Wat Pho – the Reclining Buddha & traditional Thai massage', cost: '฿300 entry + ฿400 massage' },
+      { time: 'Afternoon', activity: 'Lunch at Thip Samai (famous Pad Thai)', cost: '~฿200' },
+      { time: 'Evening', activity: 'Wat Arun at sunset – cross the river by ferry', cost: '฿100 entry' },
+      { time: 'Night', activity: 'Rooftop dinner & drinks at a sky bar', cost: '~฿2,000' }
+    ],
+    images: [
+      'https://images.unsplash.com/photo-1528181304800-259b08848526?w=400',
+      'https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=400'
+    ]
+  },
+  {
+    id: 'day3', day: 'Day 3', date: 'Sun, 12 Apr', title: 'Songkran Festival – Water Festival!',
+    location: 'Bangkok', weather: '35°C, Hot & Festive',
+    items: [
+      { time: 'All Day', activity: 'Songkran Water Festival – Thailand\'s New Year celebration!', cost: '' },
+      { time: 'Morning', activity: 'Buy water guns & waterproof bags at MBK Center', cost: '~฿500' },
+      { time: 'Afternoon', activity: 'Water fight at Silom Road – the biggest Songkran party in Bangkok', cost: '' },
+      { time: 'Evening', activity: 'Traditional Songkran ceremony at a temple – water blessings', cost: '' },
+      { time: 'Night', activity: 'Night market food crawl at Jodd Fairs', cost: '~฿500' }
+    ],
+    images: [
+      'https://images.unsplash.com/photo-1504214208698-ea1916a2195a?w=400',
+      'https://images.unsplash.com/photo-1534430480872-3498386e7856?w=400'
+    ]
+  },
+  {
+    id: 'day4', day: 'Day 4', date: 'Mon, 13 Apr', title: 'Floating Markets & Local Life',
+    location: 'Bangkok', weather: '34°C, Humid',
+    items: [
+      { time: 'Early Morning', activity: 'Damnoen Saduak Floating Market (1.5hr drive)', cost: '~฿1,500 tour' },
+      { time: 'Midday', activity: 'Boat ride through the canals & market shopping', cost: '~฿300' },
+      { time: 'Afternoon', activity: 'Chatuchak Weekend Market – huge open-air market', cost: '~฿500 shopping' },
+      { time: 'Evening', activity: 'Thai cooking class – learn green curry & tom yum', cost: '~฿1,500' },
+      { time: 'Night', activity: 'Pack for Chiang Mai, early flight tomorrow', cost: '' }
+    ],
+    images: [
+      'https://images.unsplash.com/photo-1573650450328-1e4afec2ecd7?w=400',
+      'https://images.unsplash.com/photo-1506665531195-3566af2b4dfa?w=400'
+    ]
+  },
+  {
+    id: 'day5', day: 'Day 5', date: 'Tue, 14 Apr', title: 'Fly to Chiang Mai',
+    location: 'Chiang Mai', weather: '33°C, Warm & Clear',
+    items: [
+      { time: 'Morning', activity: 'Fly Bangkok → Chiang Mai (1hr flight)', cost: '~฿2,000 pp' },
+      { time: 'Midday', activity: 'Check into boutique hotel in Old City', cost: '~฿2,000/night' },
+      { time: 'Afternoon', activity: 'Explore the Old City temples – Wat Chedi Luang, Wat Phra Singh', cost: '~฿100' },
+      { time: 'Evening', activity: 'Khao Soi (coconut curry noodles) at a local favourite', cost: '~฿150' },
+      { time: 'Night', activity: 'Night Bazaar – crafts, souvenirs, street food', cost: '~฿500' }
+    ],
+    images: [
+      'https://images.unsplash.com/photo-1599647066579-747e25f548f1?w=400',
+      'https://images.unsplash.com/photo-1512553785966-2916b5b78046?w=400'
+    ]
+  },
+  {
+    id: 'day6', day: 'Day 6', date: 'Wed, 15 Apr', title: 'Elephants & Jungle',
+    location: 'Chiang Mai', weather: '32°C, Partly Cloudy',
+    items: [
+      { time: 'Morning', activity: 'Ethical elephant sanctuary visit – feed & walk with elephants', cost: '~฿2,500 pp' },
+      { time: 'Afternoon', activity: 'Bamboo rafting through the jungle', cost: 'Included' },
+      { time: 'Late Afternoon', activity: 'Doi Suthep temple – panoramic views of Chiang Mai', cost: '฿50 entry' },
+      { time: 'Evening', activity: 'Anniversary dinner – upscale Northern Thai cuisine', cost: '~฿3,000' },
+      { time: 'Night', activity: 'Couples spa treatment – herbal compress massage', cost: '~฿2,000' }
+    ],
+    images: [
+      'https://images.unsplash.com/photo-1516382799247-87df95d790b7?w=400',
+      'https://images.unsplash.com/photo-1558431382-27e303142255?w=400'
+    ]
+  },
+  {
+    id: 'day7', day: 'Day 7', date: 'Thu, 16 Apr', title: 'Travel to Krabi',
+    location: 'Krabi', weather: '31°C, Tropical & Warm',
+    items: [
+      { time: 'Morning', activity: 'Fly Chiang Mai → Krabi (with connection)', cost: '~฿3,000 pp' },
+      { time: 'Afternoon', activity: 'Check into beachfront resort at Ao Nang', cost: '~฿3,500/night' },
+      { time: 'Late Afternoon', activity: 'Relax on Ao Nang Beach', cost: '' },
+      { time: 'Evening', activity: 'Seafood BBQ dinner on the beach', cost: '~฿1,000' },
+      { time: 'Night', activity: 'Beach bar cocktails with live music', cost: '~฿500' }
+    ],
+    images: [
+      'https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=400',
+      'https://images.unsplash.com/photo-1519451241324-20b4ea2c4220?w=400'
+    ]
+  },
+  {
+    id: 'day8', day: 'Day 8', date: 'Fri, 17 Apr', title: 'Island Hopping – 4 Islands Tour',
+    location: 'Krabi', weather: '31°C, Sunny',
+    items: [
+      { time: 'Morning', activity: 'Four Islands tour by longtail boat', cost: '~฿1,500 pp' },
+      { time: 'Mid-Morning', activity: 'Snorkel at Koh Poda – crystal clear water', cost: 'Included' },
+      { time: 'Midday', activity: 'Beach lunch on Tup Island (the sandbar)', cost: 'Included' },
+      { time: 'Afternoon', activity: 'Explore Phra Nang Cave Beach & swim at Chicken Island', cost: '' },
+      { time: 'Evening', activity: 'Sunset kayaking at Railay Beach', cost: '~฿800' },
+      { time: 'Night', activity: 'Night market dinner at Krabi Town', cost: '~฿400' }
+    ],
+    images: [
+      'https://images.unsplash.com/photo-1537956965359-7573183d1f57?w=400',
+      'https://images.unsplash.com/photo-1468413253725-0d5181091126?w=400'
+    ]
+  },
+  {
+    id: 'day9', day: 'Day 9', date: 'Sat, 18 Apr', title: 'Relaxation & Adventure',
+    location: 'Krabi', weather: '32°C, Mostly Sunny',
+    items: [
+      { time: 'Morning', activity: 'Emerald Pool & Hot Springs – swim in natural pools', cost: '฿200 entry' },
+      { time: 'Midday', activity: 'Tiger Cave Temple – 1,260 steps to the summit!', cost: '' },
+      { time: 'Afternoon', activity: 'Spa afternoon – full body Thai massage', cost: '~฿1,500' },
+      { time: 'Evening', activity: 'Final anniversary dinner – cliffside restaurant overlooking the sea', cost: '~฿3,000' },
+      { time: 'Night', activity: 'Lantern release on the beach', cost: '~฿200' }
+    ],
+    images: [
+      'https://images.unsplash.com/photo-1501446529957-6226bd447c46?w=400',
+      'https://images.unsplash.com/photo-1483683804023-6ccdb62f86ef?w=400'
+    ]
+  },
+  {
+    id: 'day10', day: 'Day 10', date: 'Sun, 19 Apr', title: 'Departure Day',
+    location: 'Krabi → Home', weather: '31°C, Clear',
+    items: [
+      { time: 'Morning', activity: 'Last breakfast by the beach & morning swim', cost: '' },
+      { time: 'Midday', activity: 'Last-minute souvenir shopping at Ao Nang', cost: '~฿1,000' },
+      { time: 'Afternoon', activity: 'Transfer to Krabi Airport', cost: '~฿500' },
+      { time: 'Evening', activity: 'Fly home – full of memories!', cost: '' }
+    ],
+    images: [
+      'https://images.unsplash.com/photo-1506665531195-3566af2b4dfa?w=400'
+    ]
+  }
+];
+
+const BUDGET = [
+  { cat: 'Flights', detail: 'Return flights + domestic flights', cost: '~฿25,000 pp' },
+  { cat: 'Hotels', detail: 'Bangkok (4n) + Chiang Mai (2n) + Krabi (3n)', cost: '~฿25,000 total' },
+  { cat: 'Food & Drink', detail: 'Street food, restaurants, sky bars', cost: '~฿15,000' },
+  { cat: 'Activities', detail: 'Tours, temples, elephant sanctuary, cooking class', cost: '~฿15,000' },
+  { cat: 'Transport', detail: 'Taxis, boats, tuk-tuks, ferries', cost: '~฿5,000' },
+  { cat: 'Shopping', detail: 'Markets, souvenirs, Songkran gear', cost: '~฿5,000' },
+  { cat: 'Spa & Wellness', detail: 'Massages, spa treatments', cost: '~฿5,000' },
+  { cat: 'Misc & Buffer', detail: 'Tips, SIM card, insurance, emergencies', cost: '~฿5,000' },
+];
+
+const CHECKLIST_ITEMS = [
+  'Book flights', 'Book hotels/resorts', 'Apply for travel insurance',
+  'Check passport expiry (6+ months)', 'Pack lightweight & waterproof clothes',
+  'Download offline maps (Google Maps / Maps.me)', 'Get Thai Baht (or use Wise card)',
+  'Buy waterproof phone pouch for Songkran', 'Pack reef-safe sunscreen & mosquito repellent',
+  'Book elephant sanctuary in advance', 'Notify bank of travel dates',
+  'Pack power adapter (Type A/B/C for Thailand)', 'Download Grab app (Thai Uber)',
+  'Book airport transfer', 'Print or save hotel confirmations',
+  'Pack small daypack for island tours'
+];
+
+// ============================================================
+// STORAGE HELPERS
+// ============================================================
+const store = {
+  get(key, fallback) { try { return JSON.parse(localStorage.getItem(key)) || fallback; } catch { return fallback; } },
+  set(key, val) { localStorage.setItem(key, JSON.stringify(val)); }
+};
+
+// ============================================================
+// COUNTDOWN
+// ============================================================
+function updateCountdown() {
+  const now = new Date();
+  const diff = TRIP_START - now;
+  const el = document.getElementById('countdown');
+  if (diff <= 0) { el.innerHTML = '<div class="unit" style="min-width:auto;padding:12px 24px"><span class="num" style="font-size:1.2rem">We\'re in Thailand! &#127796;</span></div>'; return; }
+  const d = Math.floor(diff / 86400000);
+  const h = Math.floor((diff % 86400000) / 3600000);
+  const m = Math.floor((diff % 3600000) / 60000);
+  const s = Math.floor((diff % 60000) / 1000);
+  el.innerHTML = [
+    { n: d, l: 'Days' }, { n: h, l: 'Hours' }, { n: m, l: 'Mins' }, { n: s, l: 'Secs' }
+  ].map(u => `<div class="unit"><span class="num">${u.n}</span><span class="lbl">${u.l}</span></div>`).join('');
+}
+setInterval(updateCountdown, 1000);
+updateCountdown();
+
+// ============================================================
+// RENDER DAYS
+// ============================================================
+function renderDays() {
+  const container = document.getElementById('daysContainer');
+  const navEl = document.getElementById('dayNav');
+  const notes = store.get('trip-notes', {});
+  const galleryState = store.get('trip-collapsed', {});
+  const diaryData = store.get('trip-diary', {});
+
+  let navHtml = '';
+  let daysHtml = '';
+
+  DAYS.forEach((day, di) => {
+    navHtml += `<a href="#${day.id}" title="${day.day}: ${day.title}">${di + 1}</a>`;
+
+    const collapsed = galleryState[day.id] !== false; // default collapsed
+    const diary = diaryData[day.id] || { text: '', images: [] };
+
+    let itemsHtml = day.items.map((item, ii) => {
+      const noteKey = `${day.id}-${ii}`;
+      const note = notes[noteKey] || '';
+      const hasNote = note.trim().length > 0;
+      return `
+        <div class="timeline-item" onclick="toggleNote('${noteKey}', this, event)">
+          <div class="time">${item.time}</div>
+          <div class="activity">${item.activity}
+            ${item.cost ? `<span class="cost">${item.cost}</span>` : ''}
+            ${hasNote ? '<span class="note-badge">Note</span>' : ''}
+          </div>
+          <div class="note-editor" id="note-${noteKey}">
+            <textarea placeholder="Add a note...">${note}</textarea>
+            <button onclick="saveNote('${noteKey}', this, event)">Save Note</button>
+          </div>
+        </div>`;
+    }).join('');
+
+    let imagesHtml = '';
+    if (day.images && day.images.length) {
+      imagesHtml = `
+        <button class="gallery-toggle" onclick="toggleGallery('${day.id}', this)">
+          ${collapsed ? '&#9654; Show photos' : '&#9660; Hide photos'} (${day.images.length})
+        </button>
+        <div class="imgs ${collapsed ? 'collapsed' : ''}" id="gallery-${day.id}">
+          ${day.images.map(src => `<img src="${src}" alt="${day.title}" loading="lazy" onclick="openLightbox(this.src)">`).join('')}
+        </div>`;
+    }
+
+    // Diary photos html
+    let diaryPhotosHtml = diary.images.map((src, pi) => `
+      <div class="diary-photo-wrap">
+        <img src="${src}" alt="Diary photo" onclick="openLightbox(this.src)">
+        <button class="remove-photo" onclick="removeDiaryPhoto('${day.id}', ${pi}, event)" title="Remove">&times;</button>
+      </div>
+    `).join('');
+
+    daysHtml += `
+      <div class="day-card" id="${day.id}">
+        <div class="day-header">
+          <div>
+            <h3>${day.day}: ${day.title}</h3>
+            <span class="date">${day.date}</span>
+          </div>
+          <span class="location">${day.location}</span>
+        </div>
+        <div class="day-weather">&#9729; ${day.weather}</div>
+        <div class="timeline">${itemsHtml}</div>
+        ${imagesHtml}
+        <button class="diary-btn" onclick="toggleDiary('${day.id}')">
+          &#128221; Journal ${diary.text || diary.images.length ? '(has entries)' : ''}
+        </button>
+        <div class="diary-panel" id="diary-${day.id}">
+          <h4>&#128221; ${day.day} Journal</h4>
+          <textarea id="diarytext-${day.id}" placeholder="Write about your day... What did you see, feel, taste, love?">${diary.text}</textarea>
+          <div class="upload-area" id="upload-${day.id}">
+            &#128247; Click or drag photos here to upload
+            <input type="file" accept="image/*" multiple onchange="handlePhotoUpload('${day.id}', this.files)">
+          </div>
+          <div class="diary-photos" id="diaryphotos-${day.id}">${diaryPhotosHtml}</div>
+          <button class="diary-save" onclick="saveDiary('${day.id}')">Save Journal Entry</button>
+          <span class="save-confirm" id="saveconf-${day.id}">Saved!</span>
+        </div>
+      </div>`;
+  });
+
+  container.innerHTML = daysHtml;
+  navEl.innerHTML = navHtml;
+}
+
+// ============================================================
+// NOTES
+// ============================================================
+function toggleNote(key, el, e) {
+  if (e.target.tagName === 'TEXTAREA' || e.target.tagName === 'BUTTON') return;
+  const editor = document.getElementById('note-' + key);
+  editor.classList.toggle('open');
+  if (editor.classList.contains('open')) editor.querySelector('textarea').focus();
+}
+function saveNote(key, btn, e) {
+  e.stopPropagation();
+  const text = btn.parentElement.querySelector('textarea').value;
+  const notes = store.get('trip-notes', {});
+  notes[key] = text;
+  store.set('trip-notes', notes);
+  renderDays();
+}
+
+// ============================================================
+// GALLERY TOGGLE
+// ============================================================
+function toggleGallery(dayId, btn) {
+  const gallery = document.getElementById('gallery-' + dayId);
+  const isCollapsed = gallery.classList.toggle('collapsed');
+  const state = store.get('trip-collapsed', {});
+  state[dayId] = isCollapsed;
+  store.set('trip-collapsed', state);
+  const count = gallery.querySelectorAll('img').length;
+  btn.innerHTML = isCollapsed ? `&#9654; Show photos (${count})` : `&#9660; Hide photos (${count})`;
+}
+
+// ============================================================
+// DIARY / JOURNAL
+// ============================================================
+function toggleDiary(dayId) {
+  document.getElementById('diary-' + dayId).classList.toggle('open');
+}
+
+function handlePhotoUpload(dayId, files) {
+  const diary = store.get('trip-diary', {});
+  if (!diary[dayId]) diary[dayId] = { text: '', images: [] };
+
+  const promises = Array.from(files).map(file => new Promise((resolve) => {
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      // Resize to save localStorage space
+      const img = new Image();
+      img.onload = () => {
+        const canvas = document.createElement('canvas');
+        const MAX = 800;
+        let w = img.width, h = img.height;
+        if (w > MAX || h > MAX) {
+          if (w > h) { h = h * MAX / w; w = MAX; }
+          else { w = w * MAX / h; h = MAX; }
+        }
+        canvas.width = w; canvas.height = h;
+        canvas.getContext('2d').drawImage(img, 0, 0, w, h);
+        resolve(canvas.toDataURL('image/jpeg', 0.7));
+      };
+      img.src = e.target.result;
+    };
+    reader.readAsDataURL(file);
+  }));
+
+  Promise.all(promises).then(dataUrls => {
+    diary[dayId].images.push(...dataUrls);
+    try {
+      store.set('trip-diary', diary);
+    } catch (e) {
+      alert('Storage full! Try removing some photos or using smaller images.');
+      return;
+    }
+    renderDays();
+    // Re-open the diary panel
+    document.getElementById('diary-' + dayId).classList.add('open');
+  });
+}
+
+function removeDiaryPhoto(dayId, index, e) {
+  e.stopPropagation();
+  const diary = store.get('trip-diary', {});
+  if (diary[dayId] && diary[dayId].images) {
+    diary[dayId].images.splice(index, 1);
+    store.set('trip-diary', diary);
+    renderDays();
+    document.getElementById('diary-' + dayId).classList.add('open');
+  }
+}
+
+function saveDiary(dayId) {
+  const diary = store.get('trip-diary', {});
+  if (!diary[dayId]) diary[dayId] = { text: '', images: [] };
+  diary[dayId].text = document.getElementById('diarytext-' + dayId).value;
+  try {
+    store.set('trip-diary', diary);
+  } catch (e) {
+    alert('Storage full! Try shortening your entry.');
+    return;
+  }
+  const conf = document.getElementById('saveconf-' + dayId);
+  conf.classList.add('show');
+  setTimeout(() => conf.classList.remove('show'), 2000);
+  renderDays();
+  document.getElementById('diary-' + dayId).classList.add('open');
+}
+
+// ============================================================
+// ALBUM VIEW
+// ============================================================
+function openAlbum() {
+  const diary = store.get('trip-diary', {});
+  const overlay = document.getElementById('albumOverlay');
+  const content = document.getElementById('albumContent');
+
+  let hasEntries = false;
+  let html = '<h2>Our Thailand Album</h2><p class="album-sub">Memories from our anniversary trip</p>';
+
+  DAYS.forEach(day => {
+    const entry = diary[day.id];
+    if (!entry || (!entry.text && !entry.images.length)) return;
+    hasEntries = true;
+    html += `<div class="album-day">
+      <h3>${day.day}: ${day.title} &mdash; ${day.date}</h3>
+      ${entry.text ? `<div class="album-text">${entry.text}</div>` : ''}
+      ${entry.images.length ? `<div class="album-photos">
+        ${entry.images.map(src => `<img src="${src}" alt="Memory" onclick="openLightbox(this.src)">`).join('')}
+      </div>` : ''}
+    </div>`;
+  });
+
+  if (!hasEntries) {
+    html += `<div class="album-empty">
+      <div class="big-icon">&#128247;</div>
+      <p>No journal entries yet!</p>
+      <p style="margin-top:8px;font-size:.85rem">Write about your day and upload photos in each day's Journal section. They'll appear here as your trip album.</p>
+    </div>`;
+  }
+
+  content.innerHTML = html;
+  overlay.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeAlbum() {
+  document.getElementById('albumOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+// ============================================================
+// LIGHTBOX
+// ============================================================
+function openLightbox(src) {
+  document.getElementById('lightboxImg').src = src;
+  document.getElementById('lightbox').classList.add('open');
+}
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('open');
+}
+
+// ============================================================
+// BUDGET
+// ============================================================
+function renderBudget() {
+  const body = document.getElementById('budgetBody');
+  body.innerHTML = BUDGET.map(b => `<tr><td><strong>${b.cat}</strong></td><td>${b.detail}</td><td>${b.cost}</td></tr>`).join('')
+    + '<tr><td colspan="2" class="budget-total">Estimated Total (per couple)</td><td class="budget-total">~฿100,000 (~$2,800 USD)</td></tr>';
+}
+
+// ============================================================
+// CHECKLIST
+// ============================================================
+function renderChecklist() {
+  const ul = document.getElementById('checklistUl');
+  const checked = store.get('trip-checklist', {});
+  ul.innerHTML = CHECKLIST_ITEMS.map((item, i) => {
+    const isDone = checked[i] || false;
+    return `<li class="${isDone ? 'done' : ''}">
+      <input type="checkbox" ${isDone ? 'checked' : ''} onchange="toggleCheck(${i}, this.checked)">
+      <span>${item}</span>
+    </li>`;
+  }).join('');
+}
+function toggleCheck(index, checked) {
+  const state = store.get('trip-checklist', {});
+  state[index] = checked;
+  store.set('trip-checklist', state);
+  renderChecklist();
+}
+
+// ============================================================
+// DARK MODE
+// ============================================================
+function toggleDark() {
+  document.body.classList.toggle('dark');
+  const isDark = document.body.classList.contains('dark');
+  store.set('trip-darkmode', isDark);
+  document.getElementById('darkBtn').textContent = isDark ? 'Light' : 'Dark';
+}
+function initDark() {
+  if (store.get('trip-darkmode', false)) {
+    document.body.classList.add('dark');
+    document.getElementById('darkBtn').textContent = 'Light';
+  }
+}
+
+// ============================================================
+// KEYBOARD SHORTCUTS
+// ============================================================
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    closeLightbox();
+    closeAlbum();
+  }
+});
+
+// ============================================================
+// INIT
+// ============================================================
+initDark();
+renderDays();
+renderBudget();
+renderChecklist();
+</script>
+</body>
+</html>
