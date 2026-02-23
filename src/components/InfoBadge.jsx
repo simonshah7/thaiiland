@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
+import { createPortal } from 'react-dom';
 
 const InfoIcon = () => (
   <svg
@@ -42,11 +43,12 @@ export default function InfoBadge({ info }) {
         setOpen(false);
       }
     };
+    const onScroll = () => setOpen(false);
     document.addEventListener('mousedown', close);
-    window.addEventListener('scroll', () => setOpen(false), true);
+    window.addEventListener('scroll', onScroll, true);
     return () => {
       document.removeEventListener('mousedown', close);
-      window.removeEventListener('scroll', () => setOpen(false), true);
+      window.removeEventListener('scroll', onScroll, true);
     };
   }, [open, updatePos]);
 
@@ -64,7 +66,7 @@ export default function InfoBadge({ info }) {
       >
         <InfoIcon />
       </button>
-      {open && (
+      {open && createPortal(
         <div
           ref={popRef}
           className="info-popover"
@@ -76,7 +78,8 @@ export default function InfoBadge({ info }) {
               {line}
             </div>
           ))}
-        </div>
+        </div>,
+        document.body
       )}
     </span>
   );
