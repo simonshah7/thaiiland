@@ -449,6 +449,53 @@ export const BUDGET = [
   { cat: 'Park Hyatt Bangkok', detail: '1 night, King Room City View' },
 ];
 
+export const DOCUMENTS = [
+  {
+    category: 'Flights',
+    icon: '✈️',
+    docs: [
+      { label: 'Emirates — Outbound Tickets', sublabel: 'LHR → DXB → BKK · EK006 / EK384', filename: 'EmiratesTicket1.pdf' },
+      { label: 'Emirates — Return Tickets', sublabel: 'BKK → DXB → LHR · EK373 / EK005', filename: 'EmiratesTicket2.pdf' },
+      { label: 'Bangkok Airways — All Flights', sublabel: 'PG273 + PG254 + PG130', filename: 'Bangkok Airways - Reservation.pdf' },
+      { label: 'Simon — Travel Reservation', sublabel: '18 Apr', filename: 'Travel Reservation 18APR for SIMON SHAH.pdf' },
+      { label: 'Yevgeniya — Travel Reservation', sublabel: '18 Apr', filename: 'Travel Reservation 18APR for YEVGENIYA SHAH.pdf' },
+    ],
+  },
+  {
+    category: 'Hotels',
+    icon: '🏨',
+    docs: [
+      { label: 'Mövenpick Ploenchit', sublabel: 'Bangkok · 1 night', filename: 'Movenpick Booking.com_ Confirmation.pdf' },
+      { label: 'The Slate — Booking 1', sublabel: 'Phuket · Pearl Bed Suite', filename: 'Slate Booking.com_ Confirmation.pdf' },
+      { label: 'The Slate — Booking 2', sublabel: 'Phuket · Extension night', filename: 'Slate 2 booking.pdf' },
+      { label: 'The Slate — Payment', sublabel: 'Payment confirmation', filename: 'SlatePayment.pdf' },
+      { label: 'Silavadee Pool Spa Resort', sublabel: 'Koh Samui · 4 nights', filename: 'Silavadee Koh Samui 22-27.pdf' },
+      { label: 'Park Hyatt Bangkok', sublabel: '1 night · King City View', filename: 'Park Hyatt.pdf' },
+    ],
+  },
+  {
+    category: 'Itinerary',
+    icon: '📋',
+    docs: [
+      { label: 'Full Itinerary', sublabel: 'Bangkok Anniversary Trip', filename: 'Bangkok_Itinerary_Anniversary.docx' },
+    ],
+  },
+];
+
+export const BOOKING_DOCS = {
+  'Emirates EK006': ['EmiratesTicket1.pdf'],
+  'Emirates EK384': ['EmiratesTicket1.pdf'],
+  'Emirates EK373': ['EmiratesTicket2.pdf'],
+  'Emirates EK005': ['EmiratesTicket2.pdf'],
+  'Bangkok Airways PG273': ['Bangkok Airways - Reservation.pdf'],
+  'Bangkok Airways PG254': ['Bangkok Airways - Reservation.pdf'],
+  'Bangkok Airways PG130': ['Bangkok Airways - Reservation.pdf'],
+  'Mövenpick BDMS Ploenchit': ['Movenpick Booking.com_ Confirmation.pdf'],
+  'The Slate, Phuket': ['Slate Booking.com_ Confirmation.pdf', 'Slate 2 booking.pdf'],
+  'Silavadee Pool Spa Resort': ['Silavadee Koh Samui 22-27.pdf'],
+  'Park Hyatt Bangkok': ['Park Hyatt.pdf'],
+};
+
 export const CHECKLIST_ITEMS = [
   'Book Emirates flights (LHR\u2192DXB\u2192BKK return)',
   'Book Bangkok Airways BKK\u2192HKT, HKT\u2192USM, USM\u2192BKK',

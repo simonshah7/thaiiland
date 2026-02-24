@@ -7,6 +7,7 @@ import DayNav from './components/DayNav';
 import CitySection from './components/CitySection';
 import DayCard from './components/DayCard';
 import Album from './components/Album';
+import DocumentsPanel from './components/DocumentsPanel';
 import Lightbox from './components/Lightbox';
 import Budget from './components/Budget';
 import Checklist from './components/Checklist';
@@ -18,6 +19,7 @@ export default function App() {
   const [diaryData, setDiaryData] = useLocalStorage('trip-diary', {});
   const [checklist, setChecklist] = useLocalStorage('trip-checklist', {});
   const [albumOpen, setAlbumOpen] = useState(false);
+  const [docsOpen, setDocsOpen] = useState(false);
   const [lightboxSrc, setLightboxSrc] = useState(null);
 
   useScrollReveal();
@@ -31,6 +33,7 @@ export default function App() {
       if (e.key === 'Escape') {
         setLightboxSrc(null);
         setAlbumOpen(false);
+        setDocsOpen(false);
       }
     };
     document.addEventListener('keydown', handler);
@@ -61,6 +64,9 @@ export default function App() {
   return (
     <>
       <div className="top-controls">
+        <button onClick={() => setDocsOpen(true)} title="View travel documents">
+          Docs
+        </button>
         <button onClick={() => setAlbumOpen(true)} title="View trip album">
           Album
         </button>
@@ -78,6 +84,10 @@ export default function App() {
           onClose={() => setAlbumOpen(false)}
           onOpenLightbox={setLightboxSrc}
         />
+      )}
+
+      {docsOpen && (
+        <DocumentsPanel onClose={() => setDocsOpen(false)} />
       )}
 
       <Lightbox src={lightboxSrc} onClose={() => setLightboxSrc(null)} />
