@@ -1,6 +1,24 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { createPortal } from 'react-dom';
 
+const DocIcon = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="12"
+    height="12"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    style={{ verticalAlign: 'middle' }}
+  >
+    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+    <polyline points="14 2 14 8 20 8" />
+  </svg>
+);
+
 const InfoIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -20,7 +38,7 @@ const InfoIcon = () => (
   </svg>
 );
 
-export default function InfoBadge({ info }) {
+export default function InfoBadge({ info, docs }) {
   const [open, setOpen] = useState(false);
   const [pos, setPos] = useState({ top: 0, left: 0 });
   const btnRef = useRef(null);
@@ -78,6 +96,22 @@ export default function InfoBadge({ info }) {
               {line}
             </div>
           ))}
+          {docs && docs.length > 0 && (
+            <div className="info-docs">
+              {docs.map((doc) => (
+                <a
+                  key={doc.filename}
+                  className="info-doc-link"
+                  href={`/docs/${encodeURIComponent(doc.filename)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <DocIcon /> {doc.label}
+                </a>
+              ))}
+            </div>
+          )}
         </div>,
         document.body
       )}

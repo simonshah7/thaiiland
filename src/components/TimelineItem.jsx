@@ -1,5 +1,24 @@
 import { useState } from 'react';
 import InfoBadge from './InfoBadge';
+import { BOOKING_DOCS } from '../data';
+
+function resolveBookingDocs(bookingInfo) {
+  const seen = new Set();
+  const docs = [];
+  for (const line of bookingInfo) {
+    for (const [key, filenames] of Object.entries(BOOKING_DOCS)) {
+      if (line.startsWith(key)) {
+        for (const filename of filenames) {
+          if (!seen.has(filename)) {
+            seen.add(filename);
+            docs.push({ label: 'View PDF', filename });
+          }
+        }
+      }
+    }
+  }
+  return docs;
+}
 
 export default function TimelineItem({ item, noteKey, note, onSaveNote }) {
   const [open, setOpen] = useState(false);
@@ -21,7 +40,7 @@ export default function TimelineItem({ item, noteKey, note, onSaveNote }) {
       <div className="time">{item.time}</div>
       <div className="activity">
         {item.activity}
-        {item.bookingInfo && <InfoBadge info={item.bookingInfo} />}
+        {item.bookingInfo && <InfoBadge info={item.bookingInfo} docs={resolveBookingDocs(item.bookingInfo)} />}
         {note.trim() && <span className="note-badge">Note</span>}
       </div>
       {open && (

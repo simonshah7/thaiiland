@@ -1464,3 +1464,191 @@ footer .footer-gold {
   background: rgba(201, 168, 76, 0.3);
   color: var(--text-primary);
 }
+
+/* ===== Documents Panel ===== */
+.docs-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: var(--bg);
+  overflow-y: auto;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.docs-close {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 2001;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  width: 46px;
+  height: 46px;
+  font-size: 1.3rem;
+  cursor: pointer;
+  box-shadow: var(--card-shadow);
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition);
+}
+
+.docs-close:hover {
+  background: var(--gold);
+  color: #fff;
+  border-color: var(--gold);
+}
+
+.docs-inner {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 70px 24px 100px;
+}
+
+.docs-inner h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 2.6rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 8px;
+  color: var(--text-primary);
+}
+
+.docs-sub {
+  text-align: center;
+  color: var(--text-muted);
+  margin-bottom: 50px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+.docs-category {
+  margin-bottom: 36px;
+}
+
+.docs-category h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  color: var(--text-primary);
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+}
+
+.docs-cat-icon {
+  margin-right: 8px;
+}
+
+.docs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.docs-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all var(--transition);
+  text-align: left;
+  width: 100%;
+  font-family: 'Inter', sans-serif;
+  color: var(--text-primary);
+}
+
+.docs-item:hover {
+  border-color: var(--gold);
+  box-shadow: 0 2px 12px rgba(201, 168, 76, 0.15);
+  transform: translateY(-1px);
+}
+
+.docs-item-text {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.docs-item-label {
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.docs-item-sub {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.docs-item-open {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.78rem;
+  color: var(--gold);
+  white-space: nowrap;
+  flex-shrink: 0;
+  margin-left: 16px;
+}
+
+/* ===== InfoBadge PDF Links ===== */
+.info-docs {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(201, 168, 76, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.info-doc-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--gold);
+  font-size: 0.78rem;
+  font-family: 'Inter', sans-serif;
+  text-decoration: none;
+  padding: 3px 0;
+  transition: opacity 0.2s;
+  background: none;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.info-doc-link:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+/* ===== Documents Panel Responsive ===== */
+@media (max-width: 768px) {
+  .docs-inner {
+    padding: 60px 16px 80px;
+  }
+  .docs-inner h2 {
+    font-size: 2rem;
+  }
+  .docs-item {
+    padding: 12px 14px;
+  }
+  .docs-item-label {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .docs-item-open {
+    display: none;
+  }
+}
