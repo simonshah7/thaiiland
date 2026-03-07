@@ -453,10 +453,11 @@ export const DOCUMENTS = [
     ],
   },
   {
-    category: 'Insurance',
+    category: 'Insurance & Emergency',
     icon: '🛡️',
     docs: [
       { label: 'Admiral Travel Insurance', sublabel: 'Platinum · Policy ADM/4717318/2025 · Worldwide', filename: 'Admiral Travel Insurance.pdf' },
+      { label: 'Passports', sublabel: 'Photocopies — Simon & Yevgeniya', filename: 'Passports.pdf' },
     ],
   },
   {
