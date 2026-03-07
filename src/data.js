@@ -33,21 +33,22 @@ export const DAYS = [
     day: 'Day 1',
     date: 'Wed, 16 Apr',
     title: 'Departure Day',
-    location: 'London \u2192 Dubai',
+    location: 'London \u2192 Bangkok',
     weather: '',
     items: [
       {
         time: '22:15',
-        activity: 'Depart London Heathrow \u2708\ufe0f',
+        activity: 'Depart London Gatwick \u2708\ufe0f',
         bookingInfo: [
-          'Emirates EK006',
-          'Ref: FBP2IS',
-          'Tickets: 176-2388267412 / 413',
-          'Premium Economy Flex Plus',
+          'British Airways BA 2231',
+          'Ref: Y3K2WE',
+          'Seats: 13E & 13D',
+          'Premium Economy Semi-Flex',
+          '2x23kg checked + cabin bag + handbag',
         ],
       },
     ],
-    note: 'Overnight flight \u2014 arrive Bangkok the next evening. Zero holiday time lost.',
+    note: 'Direct overnight flight \u2014 arrive Bangkok 16:05 tomorrow. No connection needed!',
     images: [],
   },
   {
@@ -58,20 +59,10 @@ export const DAYS = [
     location: 'Bangkok',
     weather: '34\u00b0C, Humid',
     items: [
-      { time: '07:45', activity: 'Arrive Dubai \u2014 connect Terminal 3' },
+      { time: '16:05', activity: 'Touch down in Bangkok \ud83c\uddf9\ud83c\udded \u2014 Direct from Gatwick!' },
+      { time: '~16:45', activity: 'Taxi or Airport Rail Link to Ploenchit (~40 mins)' },
       {
-        time: '09:30',
-        activity: 'Depart Dubai for Bangkok',
-        bookingInfo: [
-          'Emirates EK384',
-          'Ref: FBP2IS',
-          'DXB 09:30 \u2192 BKK 18:55',
-        ],
-      },
-      { time: '18:55', activity: 'Touch down in Bangkok \ud83c\uddf9\ud83c\udded' },
-      { time: '~19:00', activity: 'Taxi or Airport Rail Link to Ploenchit (~40 mins)' },
-      {
-        time: '~19:45',
+        time: '~17:30',
         activity: 'Check in M\u00f6venpick Ploenchit',
         bookingInfo: [
           'M\u00f6venpick BDMS Ploenchit',
@@ -80,7 +71,8 @@ export const DAYS = [
           'Deluxe King Room \u2014 1 night',
         ],
       },
-      { time: '~20:00', activity: 'Chao Phraya Dinner Cruise \ud83c\udf89 \u2014 Glide past the illuminated Grand Palace, Wat Arun, and riverside temples' },
+      { time: '~18:00', activity: 'Freshen up & relax at the hotel' },
+      { time: '~19:00', activity: 'Chao Phraya Dinner Cruise \ud83c\udf89 \u2014 Glide past the illuminated Grand Palace, Wat Arun, and riverside temples' },
     ],
     images: [
       'https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Bangkok_Night_Wikimedia_Commons.jpg/600px-Bangkok_Night_Wikimedia_Commons.jpg',
@@ -98,8 +90,7 @@ export const DAYS = [
     items: [
       { time: '07:00', activity: 'Early breakfast at M\u00f6venpick' },
       { time: '07:30', activity: 'Wat Pho \u2014 The Reclining Buddha. 150 feet of gold. Go early to beat the crowds and heat' },
-      { time: '08:30', activity: 'Grand Palace & Wat Phra Kaew \u2014 Thailand\u2019s most sacred temple. Cover shoulders & knees' },
-      { time: '09:45', activity: 'Wat Arun \u2014 Temple of Dawn. Cross the river by ferry (4 baht). Climb the central prang' },
+      { time: '09:00', activity: 'Grand Palace & Wat Phra Kaew \u2014 Thailand\u2019s most sacred temple. Cover shoulders & knees' },
       { time: '10:30', activity: 'Taxi back to M\u00f6venpick \u2014 collect bags' },
       { time: '11:15', activity: 'Bangkok Airways Lounge \u2014 Free for all passengers' },
       {
@@ -125,7 +116,7 @@ export const DAYS = [
       },
       { time: 'Evening', activity: 'Settle in \u2014 pool, beach, first sunset cocktails' },
     ],
-    note: 'Check out but leave bags at M\u00f6venpick (free). Do temples hands-free. Swing back to collect bags, then airport.',
+    note: 'Two temples is plenty for one morning in the heat. Leave bags at M\u00f6venpick (free), do temples hands-free, then swing back before the airport.',
     images: [
       'https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Panorama_of_Reclining_Buddha_-_Wat_Pho.jpg/600px-Panorama_of_Reclining_Buddha_-_Wat_Pho.jpg',
       'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Grand_Palace%2C_Bangkok_P1100456.JPG/600px-Grand_Palace%2C_Bangkok_P1100456.JPG',
@@ -169,7 +160,7 @@ export const DAYS = [
       { time: '', activity: 'Viking Cave \u2014 ancient paintings on limestone' },
       { time: '', activity: 'Bamboo Island \u2014 pristine white sand' },
     ],
-    note: 'Long day on the water \u2014 bring reef-safe sunscreen, hat, and seasickness tablets if sensitive.',
+    note: 'Optional: skip this if tired from yesterday\u2019s Phang Nga trip \u2014 a pool day at The Slate is just as good! If going, bring reef-safe sunscreen & seasickness tablets.',
     images: [
       'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/KohPhiPhi.JPG/600px-KohPhiPhi.JPG',
       'https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Longtail_boat_at_Maya_bay.JPG/600px-Longtail_boat_at_Maya_bay.JPG',
@@ -286,12 +277,11 @@ export const DAYS = [
     location: 'Koh Samui',
     weather: '31\u00b0C, Clear',
     items: [
-      { time: '10:00', activity: 'Island exploration by private driver' },
+      { time: '10:00', activity: 'Island exploration by private driver \u2014 pick 2\u20133 stops that appeal most' },
       { time: '', activity: 'Big Buddha Temple \u2014 12-metre golden statue on a causeway' },
-      { time: '', activity: 'Secret Buddha Garden \u2014 hidden jungle sculptures & waterfalls' },
       { time: '', activity: 'Na Muang Waterfalls \u2014 swim in the natural jungle pool' },
-      { time: '', activity: 'Hin Ta & Hin Yai \u2014 famous rock formations at Lamai Beach' },
       { time: '13:00', activity: 'Lunch at Fisherman\u2019s Village, Bophut \u2014 Charming old town' },
+      { time: 'Afternoon', activity: 'Free time \u2014 pool, beach, or optional Secret Buddha Garden / Hin Ta & Hin Yai rocks' },
       { time: '18:00', activity: 'Sunset at the Jungle Club \ud83c\udf05 \u2014 Famous hilltop bar with infinity pool' },
       { time: 'Evening', activity: 'Friday Night Walking Market \u2014 Fisherman\u2019s Village \u2014 street food, live music, artisan stalls' },
     ],
@@ -373,7 +363,7 @@ export const DAYS = [
       },
       { time: '16:30', activity: 'ICONSIAM \ud83d\udecd\ufe0f \u2014 Riverside mega-mall. Indoor floating market \u2014 authentic street food from every region' },
       { time: '18:30', activity: 'Vertigo & Moon Bar \ud83c\udf78 \u2014 Banyan Tree, 61st floor. Arrive for sunset \u2014 iconic rooftop' },
-      { time: '20:30', activity: 'Sukhumvit evening \u2014 Thonglor for Bangkok\u2019s trendiest bars & restaurants' },
+      { time: 'Evening', activity: 'Dinner near the hotel or optional Sukhumvit / Thonglor if energy allows' },
     ],
     note: 'Vertigo: smart casual, no flip-flops. Arrive by 18:30 for sunset tables.',
     images: [
@@ -387,28 +377,28 @@ export const DAYS = [
     day: 'Day 14',
     date: 'Tue, 29 Apr',
     title: 'Last Day & Fly Home',
-    location: 'Bangkok \u2192 Home',
+    location: 'Bangkok \u2192 London',
     weather: '35\u00b0C, Clear',
     items: [
       { time: '08:00', activity: 'Breakfast at Park Hyatt' },
-      { time: '08:30', activity: 'Bang Kachao \u2014 Bangkok\u2019s Green Lung \ud83c\udf3f \u2014 Cross the river by boat, rent bikes, explore a jungle oasis' },
+      { time: '09:00', activity: 'Bang Kachao \u2014 Bangkok\u2019s Green Lung \ud83c\udf3f \u2014 Cross the river by boat, rent bikes, explore a jungle oasis' },
       { time: '', activity: 'Cycle through tropical paths, elevated walkways, local villages' },
-      { time: '', activity: 'Sri Nakhon Khuean Khan Park \u2014 botanical garden' },
       { time: '', activity: 'Fresh coconut water & pad thai at a riverside shack' },
-      { time: '12:00\u201317:00', activity: 'Free afternoon \u2014 Penthouse Bar + Grill at Park Hyatt (levels 34\u201336), Shopping at Central Embassy or Siam Paragon, Jim Thompson House' },
-      { time: '17:30', activity: 'Collect bags, taxi to BKK Airport' },
+      { time: '12:00\u201318:00', activity: 'Free afternoon \u2014 Penthouse Bar + Grill at Park Hyatt (levels 34\u201336), Shopping at Central Embassy or Siam Paragon, Jim Thompson House' },
+      { time: '19:00', activity: 'Collect bags, taxi to BKK Airport' },
       {
-        time: '21:05',
-        activity: 'Emirates BKK \u2192 Dubai \u2192 London \u2708\ufe0f',
+        time: '22:35',
+        activity: 'British Airways BKK \u2192 London Gatwick \u2708\ufe0f',
         bookingInfo: [
-          'Emirates EK373 \u2192 EK005',
-          'Ref: FBP2IS',
-          'BKK 21:05 \u2192 DXB 00:55+1',
-          'DXB 02:55 \u2192 LHR 07:05',
+          'British Airways BA 2230',
+          'Ref: Y3K2WE',
+          'Seats: 13D & 13E',
+          'BKK 22:35 \u2192 LGW 05:55+1',
+          'Premium Economy Semi-Flex',
         ],
       },
     ],
-    note: 'Check out at noon \u2014 Park Hyatt stores bags. Connected to Central Embassy for shopping & lunch.',
+    note: 'Check out at noon \u2014 Park Hyatt stores bags. Connected to Central Embassy. Later BA flight (22:35) means a relaxed final evening!',
     images: [
       'https://images.unsplash.com/photo-1448375240586-882707db888b?w=600&q=80',
       'https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Bangkok_Night_Wikimedia_Commons.jpg/600px-Bangkok_Night_Wikimedia_Commons.jpg',
@@ -420,20 +410,10 @@ export const DAYS = [
     day: 'Day 15',
     date: 'Wed, 30 Apr',
     title: 'Home',
-    location: 'Dubai \u2192 London',
+    location: 'London',
     weather: '',
     items: [
-      { time: '00:55', activity: 'Arrive Dubai \u2014 connect Terminal 3' },
-      {
-        time: '02:55',
-        activity: 'Depart Dubai for London',
-        bookingInfo: [
-          'Emirates EK005',
-          'Ref: FBP2IS',
-          'DXB 02:55 \u2192 LHR 07:05',
-        ],
-      },
-      { time: '07:05', activity: 'Arrive London Heathrow \ud83c\udfe0' },
+      { time: '05:55', activity: 'Arrive London Gatwick \ud83c\udfe0 \u2014 Direct flight, no connection!' },
     ],
     note: 'Home sweet home \u2014 what a trip.',
     images: [],
@@ -441,7 +421,7 @@ export const DAYS = [
 ];
 
 export const BUDGET = [
-  { cat: 'Emirates Flights', detail: 'LHR \u2194 BKK return \u2014 Premium Economy Flex Plus' },
+  { cat: 'British Airways Flights', detail: 'LGW \u2194 BKK return \u2014 Premium Economy Semi-Flex' },
   { cat: 'Bangkok Airways', detail: 'BKK\u2192HKT + HKT\u2192USM + USM\u2192BKK (3 flights)' },
   { cat: 'M\u00f6venpick Ploenchit', detail: 'Bangkok \u2014 1 night, Deluxe King' },
   { cat: 'The Slate, Phuket', detail: '5 nights (4+1), Pearl Bed Suite' },
@@ -454,8 +434,7 @@ export const DOCUMENTS = [
     category: 'Flights',
     icon: '✈️',
     docs: [
-      { label: 'Emirates — Outbound Tickets', sublabel: 'LHR → DXB → BKK · EK006 / EK384', filename: 'EmiratesTicket1.pdf' },
-      { label: 'Emirates — Return Tickets', sublabel: 'BKK → DXB → LHR · EK373 / EK005', filename: 'EmiratesTicket2.pdf' },
+      { label: 'British Airways — Flights', sublabel: 'LGW ↔ BKK · BA 2231 / BA 2230', filename: 'BA Flights.pdf' },
       { label: 'Bangkok Airways — All Flights', sublabel: 'PG273 + PG254 + PG130', filename: 'Bangkok Airways - Reservation.pdf' },
       { label: 'Simon — Travel Reservation', sublabel: '18 Apr', filename: 'Travel Reservation 18APR for SIMON SHAH.pdf' },
       { label: 'Yevgeniya — Travel Reservation', sublabel: '18 Apr', filename: 'Travel Reservation 18APR for YEVGENIYA SHAH.pdf' },
@@ -474,6 +453,13 @@ export const DOCUMENTS = [
     ],
   },
   {
+    category: 'Insurance',
+    icon: '🛡️',
+    docs: [
+      { label: 'Admiral Travel Insurance', sublabel: 'Platinum · Policy ADM/4717318/2025 · Worldwide', filename: 'Admiral Travel Insurance.pdf' },
+    ],
+  },
+  {
     category: 'Itinerary',
     icon: '📋',
     docs: [
@@ -483,10 +469,8 @@ export const DOCUMENTS = [
 ];
 
 export const BOOKING_DOCS = {
-  'Emirates EK006': ['EmiratesTicket1.pdf'],
-  'Emirates EK384': ['EmiratesTicket1.pdf'],
-  'Emirates EK373': ['EmiratesTicket2.pdf'],
-  'Emirates EK005': ['EmiratesTicket2.pdf'],
+  'British Airways BA 2231': ['BA Flights.pdf'],
+  'British Airways BA 2230': ['BA Flights.pdf'],
   'Bangkok Airways PG273': ['Bangkok Airways - Reservation.pdf'],
   'Bangkok Airways PG254': ['Bangkok Airways - Reservation.pdf'],
   'Bangkok Airways PG130': ['Bangkok Airways - Reservation.pdf'],
@@ -497,14 +481,14 @@ export const BOOKING_DOCS = {
 };
 
 export const CHECKLIST_ITEMS = [
-  'Book Emirates flights (LHR\u2192DXB\u2192BKK return)',
+  'Book British Airways flights (LGW\u2192BKK direct return)',
   'Book Bangkok Airways BKK\u2192HKT, HKT\u2192USM, USM\u2192BKK',
   'Book M\u00f6venpick Ploenchit (1 night)',
   'Book The Slate, Phuket (5 nights)',
   'Book Silavadee Pool Spa Resort (4 nights)',
   'Book Park Hyatt Bangkok (1 night)',
   'Check passport expiry (6+ months)',
-  'Apply for travel insurance',
+  'Travel insurance \u2014 Admiral Platinum (ADM/4717318/2025)',
   'Book Phang Nga Bay speedboat tour',
   'Book Phi Phi Islands speedboat day trip',
   'Book Ang Thong Marine Park tour via Silavadee concierge',
