@@ -383,7 +383,7 @@ export const DAYS = [
       { time: '07:30', activity: 'Wat Pho \u2014 The Reclining Buddha. 150 feet of gold. Go early to beat the crowds and heat' },
       { time: '09:00', activity: 'Grand Palace & Wat Phra Kaew \u2014 Thailand\u2019s most sacred temple. Cover shoulders & knees' },
       { time: '~10:30', activity: 'Taxi back to Park Hyatt area' },
-      { time: '12:00\u201318:00', activity: 'Free afternoon \u2014 Penthouse Bar + Grill at Park Hyatt (levels 34\u201336), Shopping at Central Embassy or Siam Paragon, Jim Thompson House, or Bang Kachao (Bangkok\u2019s Green Lung \u2014 cycle through a jungle oasis)' },
+      { time: '12:00\u201318:00', activity: 'Free afternoon \u2014 Gift shopping for the family: Chatuchak (if open), ICONSIAM SookSiam for local crafts, Jim Thompson House & shop (silk scarves, bags), or MBK Center for affordable Thai goods. Penthouse Bar + Grill at Park Hyatt (levels 34\u201336) for a break' },
       { time: '19:00', activity: 'Collect bags, taxi to BKK Airport' },
       {
         time: '22:35',
