@@ -1,5 +1,6 @@
 import TimelineItem from './TimelineItem';
 import DiaryPanel from './DiaryPanel';
+import DayMap from './DayMap';
 
 export default function DayCard({
   day,
@@ -23,6 +24,8 @@ export default function DayCard({
       {day.weather && <div className="day-weather">&#9729; {day.weather}</div>}
 
       {day.note && <div className="day-note">{day.note}</div>}
+
+      <DayMap stops={day.stops} />
 
       {day.images?.length > 0 && (
         <div className="photo-grid">

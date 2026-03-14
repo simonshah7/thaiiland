@@ -427,6 +427,8 @@ img {
   box-shadow: var(--card-shadow);
   border: 1px solid var(--border);
   border-left: none;
+  max-height: 90vh;
+  overflow-y: auto;
 }
 
 .day-nav-city-label {
@@ -445,12 +447,12 @@ img {
   margin-top: 0;
 }
 
-.day-nav a {
+.day-nav a.day-nav-link {
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 36px;
-  height: 36px;
+  gap: 0;
+  min-width: 36px;
+  height: 32px;
   border-radius: 10px;
   font-family: 'Inter', sans-serif;
   font-size: 0.7rem;
@@ -458,13 +460,48 @@ img {
   color: var(--text-muted);
   transition: all var(--transition);
   text-decoration: none;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 0;
 }
 
-.day-nav a:hover,
-.day-nav a.active {
+.day-nav-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 36px;
+  width: 36px;
+  height: 32px;
+  flex-shrink: 0;
+}
+
+.day-nav-theme {
+  font-size: 0.6rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  max-width: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-width 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
+  padding: 0;
+}
+
+.day-nav:hover .day-nav-theme {
+  max-width: 180px;
+  opacity: 1;
+  padding-right: 12px;
+}
+
+.day-nav a.day-nav-link:hover,
+.day-nav a.day-nav-link.active {
   background: var(--gold);
   color: #fff;
   box-shadow: 0 2px 10px rgba(201, 168, 76, 0.35);
+}
+
+.day-nav a.day-nav-link:hover .day-nav-theme,
+.day-nav a.day-nav-link.active .day-nav-theme {
+  color: rgba(255, 255, 255, 0.85);
 }
 
 /* ===== Container ===== */
@@ -611,6 +648,103 @@ section h2::after {
   border-radius: 0 6px 6px 0;
   font-style: italic;
   line-height: 1.5;
+}
+
+/* ===== Day Map (route) ===== */
+.day-map {
+  margin-bottom: 20px;
+  background: var(--bg2);
+  border-radius: 12px;
+  padding: 16px 20px;
+  border: 1px solid var(--border);
+}
+
+.day-map-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Playfair Display', serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 14px;
+}
+
+.day-map-icon {
+  font-size: 1rem;
+}
+
+.day-map-route {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.day-map-stop {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.day-map-connector {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 4px 0 4px 16px;
+}
+
+.day-map-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, var(--gold), transparent);
+  opacity: 0.4;
+}
+
+.day-map-line:last-child {
+  background: linear-gradient(to left, var(--gold), transparent);
+}
+
+.day-map-distance {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+.day-map-pin {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 0;
+}
+
+.day-map-pin-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--gold);
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.day-map-pin-icon {
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.day-map-pin-name {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-primary);
 }
 
 /* ===== Photo Grid (always visible) ===== */
@@ -1354,6 +1488,10 @@ footer .footer-gold {
   .day-card {
     padding: 20px;
     margin-bottom: 24px;
+  }
+
+  .day-map {
+    padding: 12px 14px;
   }
 
   .photo-grid {
