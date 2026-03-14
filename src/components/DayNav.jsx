@@ -14,8 +14,10 @@ export default function DayNav() {
                 key={day.id}
                 href={`#${day.id}`}
                 title={`${day.day}: ${day.title}`}
+                className="day-nav-link"
               >
-                {start + i}
+                <span className="day-nav-number">{start + i}</span>
+                <span className="day-nav-theme">{day.theme}</span>
               </a>
             ))}
           </div>

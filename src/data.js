@@ -34,6 +34,7 @@ export const DAYS = [
     date: 'Thu, 16 Apr',
     title: 'Departure Day',
     location: 'London \u2192 Bangkok',
+    theme: 'Overnight flight to Thailand',
     weather: '',
     items: [
       {
@@ -48,6 +49,10 @@ export const DAYS = [
         ],
       },
     ],
+    stops: [
+      { name: 'London Gatwick', icon: '\u2708\ufe0f' },
+      { name: 'Bangkok (in-flight)', icon: '\ud83c\udf19', distance: '9,555 km \u00b7 11h 50m' },
+    ],
     note: 'Direct overnight flight \u2014 arrive Bangkok 16:05 tomorrow. No connection needed!',
     images: [],
   },
@@ -57,6 +62,7 @@ export const DAYS = [
     date: 'Fri, 17 Apr',
     title: 'Welcome to Bangkok',
     location: 'Bangkok',
+    theme: 'Arrival & river cruise',
     weather: '34\u00b0C, Humid',
     items: [
       { time: '16:05', activity: 'Touch down in Bangkok \ud83c\uddf9\ud83c\udded \u2014 Direct from Gatwick!' },
@@ -74,6 +80,11 @@ export const DAYS = [
       { time: '~18:00', activity: 'Freshen up & relax at the hotel' },
       { time: '~19:00', activity: 'Chao Phraya Dinner Cruise \ud83c\udf89 \u2014 Glide past the illuminated Grand Palace, Wat Arun, and riverside temples' },
     ],
+    stops: [
+      { name: 'Suvarnabhumi Airport', icon: '\u2708\ufe0f' },
+      { name: 'M\u00f6venpick Ploenchit', icon: '\ud83c\udfe8', distance: '30 km \u00b7 40 min' },
+      { name: 'Chao Phraya River Cruise', icon: '\ud83d\udea2', distance: '8 km \u00b7 20 min' },
+    ],
     images: [
       'https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Bangkok_Night_Wikimedia_Commons.jpg/600px-Bangkok_Night_Wikimedia_Commons.jpg',
       'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Wat_Arun_Ratchawararam_and_Royal_Barge_Procession.JPG/600px-Wat_Arun_Ratchawararam_and_Royal_Barge_Procession.JPG',
@@ -86,6 +97,7 @@ export const DAYS = [
     date: 'Sat, 18 Apr',
     title: 'Fly to Phuket',
     location: 'Bangkok \u2192 Phuket',
+    theme: 'Beach-bound flight south',
     weather: '35\u00b0C, Sunny',
     items: [
       { time: 'Morning', activity: 'Sleep in & leisurely breakfast at M\u00f6venpick \u2014 recover from the overnight flight' },
@@ -115,6 +127,12 @@ export const DAYS = [
       },
       { time: 'Evening', activity: 'Settle in \u2014 pool, beach, first sunset cocktails' },
     ],
+    stops: [
+      { name: 'M\u00f6venpick Ploenchit', icon: '\ud83c\udfe8' },
+      { name: 'Suvarnabhumi Airport', icon: '\u2708\ufe0f', distance: '30 km \u00b7 30 min' },
+      { name: 'Phuket Airport', icon: '\u2708\ufe0f', distance: '862 km \u00b7 1h 30m' },
+      { name: 'The Slate', icon: '\ud83c\udfe8', distance: '10 km \u00b7 15 min' },
+    ],
     note: 'Take it easy after the overnight flight \u2014 save the temples for the return Bangkok visit on Day 14.',
     images: [
       'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Railay.jpg/600px-Railay.jpg',
@@ -128,6 +146,7 @@ export const DAYS = [
     date: 'Sun, 19 Apr',
     title: 'Phang Nga Bay & James Bond Island',
     location: 'Phuket',
+    theme: 'Speedboat through limestone karsts',
     weather: '31\u00b0C, Tropical',
     items: [
       { time: '08:00', activity: 'Phang Nga Bay full-day tour \ud83d\udea4 \u2014 Speedboat through limestone karsts rising from emerald water' },
@@ -137,6 +156,14 @@ export const DAYS = [
       { time: '', activity: 'Swimming at Naka Island white sand beach' },
       { time: '~17:00', activity: 'Return to The Slate' },
       { time: 'Evening', activity: 'Sunset drinks & seafood on Nai Yang Beach' },
+    ],
+    stops: [
+      { name: 'The Slate', icon: '\ud83c\udfe8' },
+      { name: 'Ao Po Pier', icon: '\u26f5', distance: '25 km \u00b7 35 min' },
+      { name: 'Panak Island', icon: '\ud83d\udea3', distance: '15 km \u00b7 20 min' },
+      { name: 'James Bond Island', icon: '\ud83c\udfdd\ufe0f', distance: '5 km \u00b7 10 min' },
+      { name: 'Koh Panyee', icon: '\ud83c\udfd8\ufe0f', distance: '3 km \u00b7 5 min' },
+      { name: 'The Slate', icon: '\ud83c\udfe8', distance: '25 km \u00b7 35 min' },
     ],
     images: [
       'https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Longtail_boat_at_Maya_bay.JPG/600px-Longtail_boat_at_Maya_bay.JPG',
@@ -150,6 +177,7 @@ export const DAYS = [
     date: 'Mon, 20 Apr',
     title: 'Spa Day & Old Phuket Town',
     location: 'Phuket',
+    theme: 'Relaxation & local charm',
     weather: '32\u00b0C, Partly Cloudy',
     items: [
       { time: 'Morning', activity: 'Sleep in \u2014 lazy breakfast by the pool \ud83d\ude0c' },
@@ -159,6 +187,13 @@ export const DAYS = [
       { time: '', activity: 'Sirinat National Park \u2014 800m mangrove boardwalk' },
       { time: '17:30', activity: 'Nai Yang Beach sunset \ud83c\udf05 \u2014 Coconut shakes, watch planes land overhead' },
       { time: 'Evening', activity: 'Old Phuket Town \u2014 Sino-Portuguese architecture, street art, incredible street food' },
+    ],
+    stops: [
+      { name: 'The Slate', icon: '\ud83c\udfe8' },
+      { name: 'Coqoon Spa', icon: '\ud83d\udc86', distance: 'On-site' },
+      { name: 'Nai Yang Beach', icon: '\ud83c\udfd6\ufe0f', distance: '1 km \u00b7 5 min' },
+      { name: 'Sirinat National Park', icon: '\ud83c\udf3f', distance: '2 km \u00b7 5 min' },
+      { name: 'Old Phuket Town', icon: '\ud83c\udfdb\ufe0f', distance: '28 km \u00b7 40 min' },
     ],
     note: 'Rest up after yesterday\u2019s Phang Nga adventure. Try mee hokkien and oh-aew shaved ice on Soi Romanee \u2014 the prettiest street in Phuket.',
     images: [
@@ -173,6 +208,7 @@ export const DAYS = [
     date: 'Tue, 21 Apr',
     title: 'Phi Phi Islands & Maya Bay',
     location: 'Phuket',
+    theme: 'Island hopping adventure',
     weather: '31\u00b0C, Sunny',
     items: [
       { time: '07:00', activity: 'Phi Phi Islands speedboat day trip \ud83c\udfd6\ufe0f \u2014 Hotel pickup ~06:30' },
@@ -181,6 +217,14 @@ export const DAYS = [
       { time: '', activity: 'Snorkelling at Loh Samah Bay' },
       { time: '', activity: 'Viking Cave \u2014 ancient paintings on limestone' },
       { time: '', activity: 'Bamboo Island \u2014 pristine white sand' },
+    ],
+    stops: [
+      { name: 'The Slate', icon: '\ud83c\udfe8' },
+      { name: 'Rassada Pier', icon: '\u26f5', distance: '30 km \u00b7 40 min' },
+      { name: 'Maya Bay', icon: '\ud83c\udfd6\ufe0f', distance: '42 km \u00b7 1h' },
+      { name: 'Pileh Lagoon', icon: '\ud83d\udca7', distance: '1 km \u00b7 5 min' },
+      { name: 'Viking Cave', icon: '\ud83e\udea8', distance: '2 km \u00b7 5 min' },
+      { name: 'Bamboo Island', icon: '\ud83c\udf34', distance: '8 km \u00b7 15 min' },
     ],
     note: 'Refreshed after yesterday\u2019s spa day! Bring reef-safe sunscreen & seasickness tablets.',
     images: [
@@ -195,11 +239,17 @@ export const DAYS = [
     date: 'Wed, 22 Apr',
     title: 'Last Full Day in Phuket',
     location: 'Phuket',
+    theme: 'Beach, cooking & fine dining',
     weather: '31\u00b0C, Warm',
     items: [
       { time: 'Morning', activity: 'Beach morning \u2014 last swim at Nai Yang' },
       { time: 'Afternoon', activity: 'Optional: Thai cooking class \u2014 pad thai, green curry, mango sticky rice' },
       { time: 'Evening', activity: 'Black Ginger Restaurant \ud83d\udda4 \u2014 Fine dining on a raft punted across a lake \u2014 The Slate\u2019s signature' },
+    ],
+    stops: [
+      { name: 'The Slate', icon: '\ud83c\udfe8' },
+      { name: 'Nai Yang Beach', icon: '\ud83c\udfd6\ufe0f', distance: '1 km \u00b7 5 min' },
+      { name: 'Black Ginger', icon: '\ud83c\udf7d\ufe0f', distance: 'On-site' },
     ],
     note: 'Black Ginger needs advance booking \u2014 ask at reception on Day 3. Unforgettable.',
     images: [
@@ -214,6 +264,7 @@ export const DAYS = [
     date: 'Thu, 23 Apr',
     title: 'Fly to Koh Samui',
     location: 'Phuket \u2192 Koh Samui',
+    theme: 'Island hop to paradise',
     weather: '31\u00b0C, Clear',
     items: [
       { time: '08:00', activity: 'Final Slate breakfast' },
@@ -240,6 +291,12 @@ export const DAYS = [
       },
       { time: '17:30', activity: 'First sunset from our private infinity pool \u2014 Overlooking the Gulf of Thailand' },
     ],
+    stops: [
+      { name: 'The Slate', icon: '\ud83c\udfe8' },
+      { name: 'Phuket Airport', icon: '\u2708\ufe0f', distance: '10 km \u00b7 15 min' },
+      { name: 'Samui Airport', icon: '\u2708\ufe0f', distance: '530 km \u00b7 1h' },
+      { name: 'Silavadee Resort', icon: '\ud83c\udfe8', distance: '18 km \u00b7 25 min' },
+    ],
     note: 'Be packed and ready at noon sharp \u2014 the 13:00 flight is tight. Airport is only 10 mins from The Slate.',
     images: [
       'https://images.unsplash.com/photo-1540202404-a2f29016b523?w=600&q=80',
@@ -253,6 +310,7 @@ export const DAYS = [
     date: 'Fri, 24 Apr',
     title: 'Explore the Island',
     location: 'Koh Samui',
+    theme: 'Temples, waterfalls & night market',
     weather: '31\u00b0C, Clear',
     items: [
       { time: '10:00', activity: 'Island exploration by private driver \u2014 pick 2\u20133 stops that appeal most' },
@@ -262,6 +320,13 @@ export const DAYS = [
       { time: 'Afternoon', activity: 'Free time \u2014 pool, beach, or optional Secret Buddha Garden / Hin Ta & Hin Yai rocks' },
       { time: '18:00', activity: 'Sunset at the Jungle Club \ud83c\udf05 \u2014 Famous hilltop bar with infinity pool' },
       { time: 'Evening', activity: 'Friday Night Walking Market \u2014 Fisherman\u2019s Village \u2014 street food, live music, artisan stalls' },
+    ],
+    stops: [
+      { name: 'Silavadee Resort', icon: '\ud83c\udfe8' },
+      { name: 'Big Buddha Temple', icon: '\u26e9\ufe0f', distance: '22 km \u00b7 30 min' },
+      { name: 'Na Muang Waterfalls', icon: '\ud83c\udf0a', distance: '12 km \u00b7 20 min' },
+      { name: 'Fisherman\u2019s Village', icon: '\ud83c\udfaa', distance: '18 km \u00b7 25 min' },
+      { name: 'Jungle Club', icon: '\ud83c\udf05', distance: '8 km \u00b7 15 min' },
     ],
     note: 'The Friday night market is one of Samui\u2019s best \u2014 our timing is perfect!',
     images: [
@@ -276,6 +341,7 @@ export const DAYS = [
     date: 'Sat, 25 Apr',
     title: 'Ang Thong Marine Park',
     location: 'Koh Samui',
+    theme: '42 emerald islands by boat',
     weather: '30\u00b0C, Sunny',
     items: [
       { time: '08:00', activity: 'Ang Thong National Marine Park \ud83c\udfde\ufe0f \u2014 Full-day boat tour \u2014 42 emerald islands' },
@@ -283,6 +349,13 @@ export const DAYS = [
       { time: '', activity: 'Hike to Koh Wua Talap viewpoint \u2014 jaw-dropping panorama' },
       { time: '', activity: 'Snorkelling in crystal-clear waters' },
       { time: '', activity: 'Beach time on pristine white sand' },
+    ],
+    stops: [
+      { name: 'Silavadee Resort', icon: '\ud83c\udfe8' },
+      { name: 'Nathon Pier', icon: '\u26f5', distance: '25 km \u00b7 35 min' },
+      { name: 'Emerald Lake', icon: '\ud83d\udca0', distance: '30 km \u00b7 45 min' },
+      { name: 'Koh Wua Talap', icon: '\u26f0\ufe0f', distance: '3 km \u00b7 10 min' },
+      { name: 'Silavadee Resort', icon: '\ud83c\udfe8', distance: '25 km \u00b7 35 min' },
     ],
     note: 'Ang Thong is THE highlight of Koh Samui \u2014 book through Silavadee concierge.',
     images: [
@@ -297,11 +370,17 @@ export const DAYS = [
     date: 'Sun, 26 Apr',
     title: 'Anniversary Day',
     location: 'Koh Samui',
+    theme: '25 years celebrated in paradise',
     weather: '31\u00b0C, Warm',
     items: [
       { time: 'Morning', activity: 'Sunrise yoga at Silavadee' },
       { time: 'Daytime', activity: 'Beach day at Choeng Mon \ud83c\udfd6\ufe0f \u2014 Calm crescent bay, crystal-clear water, total serenity' },
       { time: 'Evening', activity: 'Private Anniversary Dinner \u2764\ufe0f \u2014 Candlelit table on the rocks at Silavadee, overlooking the sea \u2014 just for us' },
+    ],
+    stops: [
+      { name: 'Silavadee Resort', icon: '\ud83c\udfe8' },
+      { name: 'Choeng Mon Beach', icon: '\ud83c\udfd6\ufe0f', distance: '20 km \u00b7 25 min' },
+      { name: 'Anniversary Dinner', icon: '\u2764\ufe0f', distance: 'At Silavadee' },
     ],
     note: '25 years together \u2014 ask Silavadee at check-in to arrange our private dinner on the rocks.',
     images: [
@@ -316,11 +395,17 @@ export const DAYS = [
     date: 'Mon, 27 Apr',
     title: 'Last Day in Paradise',
     location: 'Koh Samui',
+    theme: 'Cooking class & beach farewell',
     weather: '30\u00b0C, Sunny',
     items: [
       { time: 'Morning', activity: 'Thai cooking class \ud83c\udf5c \u2014 Green curry, pad thai, tom yum, mango sticky rice' },
       { time: 'Afternoon', activity: 'Final pool & beach time \u2014 make the most of every last minute' },
       { time: 'Evening', activity: 'Fresh seafood beachfront dinner \u2014 toes in the sand, waves on the shore' },
+    ],
+    stops: [
+      { name: 'Silavadee Resort', icon: '\ud83c\udfe8' },
+      { name: 'Cooking Class', icon: '\ud83c\udf5c', distance: '5 km \u00b7 10 min' },
+      { name: 'Beach Dinner', icon: '\ud83c\udf7d\ufe0f', distance: '3 km \u00b7 5 min' },
     ],
     note: 'Pack tonight \u2014 leave Silavadee by 09:45 tomorrow for the 11:45 flight. Arrange transfer at check-in.',
     images: [
@@ -335,6 +420,7 @@ export const DAYS = [
     date: 'Tue, 28 Apr',
     title: 'Return to Bangkok',
     location: 'Koh Samui \u2192 Bangkok',
+    theme: 'Return to the city of angels',
     weather: '34\u00b0C, Hot',
     items: [
       { time: '07:30', activity: 'Breakfast at Silavadee \u2014 last morning' },
@@ -364,6 +450,14 @@ export const DAYS = [
       { time: '18:30', activity: 'Vertigo & Moon Bar \ud83c\udf78 \u2014 Banyan Tree, 61st floor. Arrive for sunset \u2014 iconic rooftop' },
       { time: 'Evening', activity: 'Dinner near the hotel or optional Sukhumvit / Thonglor if energy allows' },
     ],
+    stops: [
+      { name: 'Silavadee Resort', icon: '\ud83c\udfe8' },
+      { name: 'Samui Airport', icon: '\u2708\ufe0f', distance: '18 km \u00b7 25 min' },
+      { name: 'Suvarnabhumi Airport', icon: '\u2708\ufe0f', distance: '600 km \u00b7 1h 15m' },
+      { name: 'Park Hyatt', icon: '\ud83c\udfe8', distance: '30 km \u00b7 35 min' },
+      { name: 'ICONSIAM', icon: '\ud83d\udecd\ufe0f', distance: '8 km \u00b7 15 min' },
+      { name: 'Vertigo & Moon Bar', icon: '\ud83c\udf78', distance: '6 km \u00b7 12 min' },
+    ],
     note: 'Vertigo: smart casual, no flip-flops. Arrive by 18:30 for sunset tables.',
     images: [
       'https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Bangkok_Night_Wikimedia_Commons.jpg/600px-Bangkok_Night_Wikimedia_Commons.jpg',
@@ -377,6 +471,7 @@ export const DAYS = [
     date: 'Wed, 29 Apr',
     title: 'Golden Temples & Wat Arun',
     location: 'Bangkok',
+    theme: 'Sacred temples & Chinatown feasting',
     weather: '35\u00b0C, Clear',
     items: [
       { time: '07:00', activity: 'Early breakfast at Park Hyatt' },
@@ -386,6 +481,13 @@ export const DAYS = [
       { time: '~11:30', activity: 'Lunch at a riverside restaurant near Wat Arun \u2014 Supatra River House or Sala Rattanakosin, views back across to the Grand Palace' },
       { time: 'Afternoon', activity: 'Back to hotel \u2014 pool, rest, recover from a morning in the heat' },
       { time: 'Evening', activity: 'Chinatown (Yaowarat Road) \u2014 Bangkok\u2019s best street food. Wok-fried noodles, roast duck, crab omelettes, mango sticky rice. Comes alive after dark' },
+    ],
+    stops: [
+      { name: 'Park Hyatt', icon: '\ud83c\udfe8' },
+      { name: 'Wat Pho', icon: '\ud83d\uded5', distance: '12 km \u00b7 20 min' },
+      { name: 'Grand Palace', icon: '\ud83c\udff0', distance: '0.5 km \u00b7 5 min' },
+      { name: 'Wat Arun', icon: '\ud83d\uded5', distance: '1 km \u00b7 5 min ferry' },
+      { name: 'Chinatown', icon: '\ud83c\udf5c', distance: '3 km \u00b7 10 min' },
     ],
     note: 'Temples first thing \u2014 beat the heat and crowds. Three temples in one morning is ambitious but doable if you start early. Chinatown is unmissable \u2014 completely different vibe to anything else on the trip.',
     images: [
@@ -400,6 +502,7 @@ export const DAYS = [
     date: 'Thu, 30 Apr',
     title: 'Shopping & Culture',
     location: 'Bangkok',
+    theme: 'Gifts, silk & night markets',
     weather: '34\u00b0C, Hot',
     items: [
       { time: '09:00', activity: 'Jim Thompson House \u2014 Beautiful teak house, silk museum (~1 hour), then the Jim Thompson shop next door for silk scarves, bags & cushion covers' },
@@ -407,6 +510,13 @@ export const DAYS = [
       { time: '13:00', activity: 'Lunch at MBK food court or Siam Paragon food hall \u2014 excellent and affordable' },
       { time: '~16:00', activity: 'Asiatique the Riverfront \u2014 Open-air riverside night market. Handmade jewellery, scented soaps, Thai ceramics, silk accessories. Great for unique gifts' },
       { time: 'Evening', activity: 'Dinner at Thonglor \u2014 Bangkok\u2019s trendiest neighbourhood. Great restaurants, cocktail bars, very local feel' },
+    ],
+    stops: [
+      { name: 'Park Hyatt', icon: '\ud83c\udfe8' },
+      { name: 'Jim Thompson House', icon: '\ud83c\udfdb\ufe0f', distance: '4 km \u00b7 10 min' },
+      { name: 'MBK Center', icon: '\ud83d\udecd\ufe0f', distance: '1 km \u00b7 5 min' },
+      { name: 'Asiatique', icon: '\ud83c\udfaa', distance: '10 km \u00b7 20 min' },
+      { name: 'Thonglor', icon: '\ud83c\udf78', distance: '12 km \u00b7 20 min' },
     ],
     note: 'The big gift-shopping day \u2014 Jim Thompson for silk, MBK for affordable local finds, Asiatique for handcrafted treasures. Something for all three daughters, mother-in-law, and mum!',
     images: [
@@ -421,6 +531,7 @@ export const DAYS = [
     date: 'Fri, 1 May',
     title: 'Last Day & Fly Home',
     location: 'Bangkok \u2192 London',
+    theme: 'Massage, last views & farewell flight',
     weather: '35\u00b0C, Clear',
     items: [
       { time: 'Morning', activity: 'Sleep in \u2014 lazy last breakfast at Park Hyatt' },
@@ -440,6 +551,12 @@ export const DAYS = [
         ],
       },
     ],
+    stops: [
+      { name: 'Park Hyatt', icon: '\ud83c\udfe8' },
+      { name: 'Wat Pho Massage School', icon: '\ud83d\udc86', distance: '12 km \u00b7 20 min' },
+      { name: 'Central Embassy', icon: '\ud83d\udecd\ufe0f', distance: '12 km \u00b7 20 min' },
+      { name: 'Suvarnabhumi Airport', icon: '\u2708\ufe0f', distance: '30 km \u00b7 40 min' },
+    ],
     note: 'No rush today \u2014 treat yourselves to a proper Thai massage, then wind down. The late 22:35 flight means you have the whole day.',
     images: [
       'https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Bangkok_Night_Wikimedia_Commons.jpg/600px-Bangkok_Night_Wikimedia_Commons.jpg',
@@ -453,9 +570,14 @@ export const DAYS = [
     date: 'Sat, 2 May',
     title: 'Home',
     location: 'London',
+    theme: 'Welcome home',
     weather: '',
     items: [
       { time: '05:55', activity: 'Arrive London Gatwick \ud83c\udfe0 \u2014 Direct flight, no connection!' },
+    ],
+    stops: [
+      { name: 'London Gatwick', icon: '\u2708\ufe0f' },
+      { name: 'Home', icon: '\ud83c\udfe0', distance: '9,555 km \u00b7 11h 20m' },
     ],
     note: 'Home sweet home \u2014 what a trip. 17 days, 4 cities, 25 years celebrated.',
     images: [],
