@@ -434,7 +434,7 @@ export const DAYS = [
         bookingInfo: [
           'British Airways BA 2230',
           'Ref: Y3K2WE',
-          'Seats: 13D & 13E',
+          'Seats: 11A & 11B',
           'BKK 22:35 \u2192 LGW 05:55+1',
           'Premium Economy Semi-Flex',
         ],
@@ -464,6 +464,7 @@ export const DAYS = [
 
 export const BUDGET = [
   { cat: 'British Airways Flights', detail: 'LGW \u2194 BKK return \u2014 Premium Economy Semi-Flex' },
+  { cat: 'BA Flight Change Fee', detail: 'Return moved from 29 Apr to 1 May \u2014 \u00a3490' },
   { cat: 'Bangkok Airways', detail: 'BKK\u2192HKT + HKT\u2192USM + USM\u2192BKK (3 flights)' },
   { cat: 'M\u00f6venpick Ploenchit', detail: 'Bangkok \u2014 1 night, Deluxe King' },
   { cat: 'The Slate, Phuket', detail: '5 nights (4+1), Pearl Bed Suite' },
@@ -476,7 +477,8 @@ export const DOCUMENTS = [
     category: 'Flights',
     icon: '✈️',
     docs: [
-      { label: 'British Airways — Flights', sublabel: 'LGW ↔ BKK · BA 2231 / BA 2230', filename: 'BA Flights.pdf' },
+      { label: 'British Airways — Outbound', sublabel: 'LGW → BKK · BA 2231 · 16 Apr', filename: 'BA Flights.pdf' },
+      { label: 'British Airways — Return', sublabel: 'BKK → LGW · BA 2230 · 1 May (updated)', filename: 'ba return.pdf' },
       { label: 'Bangkok Airways — All Flights', sublabel: 'PG273 + PG254 + PG130', filename: 'Bangkok Airways - Reservation.pdf' },
       { label: 'Simon — Travel Reservation', sublabel: '18 Apr', filename: 'Travel Reservation 18APR for SIMON SHAH.pdf' },
       { label: 'Yevgeniya — Travel Reservation', sublabel: '18 Apr', filename: 'Travel Reservation 18APR for YEVGENIYA SHAH.pdf' },
@@ -491,7 +493,7 @@ export const DOCUMENTS = [
       { label: 'The Slate — Booking 2', sublabel: 'Phuket · Extension night', filename: 'Slate 2 booking.pdf' },
       { label: 'The Slate — Payment', sublabel: 'Payment confirmation', filename: 'SlatePayment.pdf' },
       { label: 'Silavadee Pool Spa Resort', sublabel: 'Koh Samui · 4 nights', filename: 'Silavadee Koh Samui 22-27.pdf' },
-      { label: 'Park Hyatt Bangkok', sublabel: '1 night · King City View', filename: 'Park Hyatt.pdf' },
+      { label: 'Park Hyatt Bangkok', sublabel: '3 nights · King City View', filename: 'Park Hyatt.pdf' },
     ],
   },
   {
@@ -513,7 +515,7 @@ export const DOCUMENTS = [
 
 export const BOOKING_DOCS = {
   'British Airways BA 2231': ['BA Flights.pdf'],
-  'British Airways BA 2230': ['BA Flights.pdf'],
+  'British Airways BA 2230': ['ba return.pdf'],
   'Bangkok Airways PG273': ['Bangkok Airways - Reservation.pdf'],
   'Bangkok Airways PG254': ['Bangkok Airways - Reservation.pdf'],
   'Bangkok Airways PG130': ['Bangkok Airways - Reservation.pdf'],
@@ -529,7 +531,7 @@ export const CHECKLIST_ITEMS = [
   'Book M\u00f6venpick Ploenchit (1 night)',
   'Book The Slate, Phuket (5 nights)',
   'Book Silavadee Pool Spa Resort (4 nights)',
-  'Book Park Hyatt Bangkok (1 night)',
+  'Book Park Hyatt Bangkok (3 nights)',
   'Check passport expiry (6+ months)',
   'Travel insurance \u2014 Admiral Platinum (ADM/4717318/2025)',
   'Book Phang Nga Bay speedboat tour',
