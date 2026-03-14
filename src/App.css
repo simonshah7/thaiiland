@@ -747,6 +747,41 @@ section h2::after {
   color: var(--text-primary);
 }
 
+/* ===== Day Map Leaflet ===== */
+.day-map-leaflet-wrapper {
+  margin-bottom: 14px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.day-map-leaflet {
+  height: 260px;
+  width: 100%;
+  z-index: 1;
+}
+
+.day-map-marker {
+  background: none !important;
+  border: none !important;
+}
+
+.day-map-marker-pin {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--gold, #c9a84c);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  border: 2px solid #fff;
+}
+
 /* ===== Photo Grid (always visible) ===== */
 .photo-grid {
   display: grid;
