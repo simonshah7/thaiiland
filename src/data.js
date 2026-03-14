@@ -479,6 +479,7 @@ export const DOCUMENTS = [
     docs: [
       { label: 'British Airways — Outbound', sublabel: 'LGW → BKK · BA 2231 · 16 Apr', filename: 'BA Flights.pdf' },
       { label: 'British Airways — Return', sublabel: 'BKK → LGW · BA 2230 · 1 May (updated)', filename: 'ba return.pdf' },
+      { label: 'BA Booking Change Confirmation', sublabel: 'E-ticket receipt · Y3K2WE · 1 May return', filename: 'BA Itinerary.pdf' },
       { label: 'Bangkok Airways — All Flights', sublabel: 'PG273 + PG254 + PG130', filename: 'Bangkok Airways - Reservation.pdf' },
       { label: 'Simon — Travel Reservation', sublabel: '18 Apr', filename: 'Travel Reservation 18APR for SIMON SHAH.pdf' },
       { label: 'Yevgeniya — Travel Reservation', sublabel: '18 Apr', filename: 'Travel Reservation 18APR for YEVGENIYA SHAH.pdf' },
@@ -514,8 +515,8 @@ export const DOCUMENTS = [
 ];
 
 export const BOOKING_DOCS = {
-  'British Airways BA 2231': ['BA Flights.pdf'],
-  'British Airways BA 2230': ['ba return.pdf'],
+  'British Airways BA 2231': ['BA Flights.pdf', 'BA Itinerary.pdf'],
+  'British Airways BA 2230': ['ba return.pdf', 'BA Itinerary.pdf'],
   'Bangkok Airways PG273': ['Bangkok Airways - Reservation.pdf'],
   'Bangkok Airways PG254': ['Bangkok Airways - Reservation.pdf'],
   'Bangkok Airways PG130': ['Bangkok Airways - Reservation.pdf'],
