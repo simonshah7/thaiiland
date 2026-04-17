@@ -591,7 +591,7 @@ export const BUDGET = [
   { cat: 'M\u00f6venpick Ploenchit', detail: 'Bangkok \u2014 1 night, Deluxe King' },
   { cat: 'The Slate, Phuket', detail: '5 nights (4+1), Pearl Bed Suite' },
   { cat: 'Silavadee Pool Spa', detail: 'Koh Samui \u2014 4 nights, Ocean View Pool Villa' },
-  { cat: 'Park Hyatt Bangkok', detail: '3 nights, King Room City View' },
+  { cat: 'Park Hyatt Bangkok', detail: '3 nights, King Room City View — £957.47' },
 ];
 
 export const DOCUMENTS = [
@@ -617,6 +617,7 @@ export const DOCUMENTS = [
       { label: 'The Slate — Payment', sublabel: 'Payment confirmation', filename: 'SlatePayment.pdf' },
       { label: 'Silavadee Pool Spa Resort', sublabel: 'Koh Samui · 4 nights', filename: 'Silavadee Koh Samui 22-27.pdf' },
       { label: 'Park Hyatt Bangkok', sublabel: '3 nights · King City View', filename: 'Park Hyatt.pdf' },
+      { label: 'Park Hyatt Bangkok — Confirmation', sublabel: 'Booking.com receipt · £957.47', filename: 'Park Hyatt Booking.com_ Confirmation.pdf' },
     ],
   },
   {
@@ -645,7 +646,7 @@ export const BOOKING_DOCS = {
   'Mövenpick BDMS Ploenchit': ['Movenpick Booking.com_ Confirmation.pdf'],
   'The Slate, Phuket': ['Slate Booking.com_ Confirmation.pdf', 'Slate 2 booking.pdf'],
   'Silavadee Pool Spa Resort': ['Silavadee Koh Samui 22-27.pdf'],
-  'Park Hyatt Bangkok': ['Park Hyatt.pdf'],
+  'Park Hyatt Bangkok': ['Park Hyatt.pdf', 'Park Hyatt Booking.com_ Confirmation.pdf'],
 };
 
 export const CHECKLIST_ITEMS = [
